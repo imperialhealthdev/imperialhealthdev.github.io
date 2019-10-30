@@ -1,0 +1,264 @@
+
+*{
+    font-family: 'Montserrat' , sans-serif !important;
+    font-weight: 600;
+}
+
+body {
+    padding-top: 100px;
+}
+
+.careers-body {
+    padding-top: 100px;
+}
+
+.search-body {
+    padding-top: 100px;
+    background-color: #ffffff;
+    
+}
+
+.navbar-nav {
+    font-size: 21px;
+    font-weight: 200px;
+    margin-top: 50px;
+}
+
+.navbar-custom .navbar-nav .nav-link{
+    color: rgba(81, 0, 160, 0.64);
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+}
+
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:focus .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #86d3c4;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+.page-footer { 
+    color: #ffffff;
+    background-color: rgba(81, 0, 160, 0.64);
+    width: 100%;    
+}
+
+.footer-copyright {
+    font-weight: 200;
+} 
+
+.carousel-inner {
+    height: 845px;
+
+}
+
+@media only screen and (max-width: 1146px) {
+  .carousel-inner {
+    height: 100%;
+ }
+    
+    .table-responsive {
+        height: 100%; 
+    }
+    
+    .indeedjobs-widget{
+        height: 100%;
+    }
+    
+}
+
+.google-maps {
+       position: relative;
+        padding-bottom: 10%;
+        height: 100%;
+        overflow: hidden;
+    }
+.google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+.modal-content {
+    background-color:#ffffff; 
+}
+
+.modal-header h4 , h5{
+    color: rgba(81, 0, 160, 0.64);  
+}
+
+.modal-body button {
+    float: right;
+}
+
+.modal-body h6{
+    color: rgba(110, 118, 129, 0.81);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.modal-content h5 {
+    rgba(129, 0, 255, 0.64);  
+}
+
+@media only screen and (max-width: 768px) {
+.modal-lg {
+    max-width: 90% !important;
+    }
+}
+
+.indeedjobs-widget {
+    padding-left: 90px;
+    padding-top: 90px;
+    padding-bottom: 348px;
+    width: 100%;
+    height: 60%;
+}
+
+.navbar-light .navbar-text a {
+    color: rgba(0, 108, 255, 0.81);  
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: rgba(81, 0, 160, 0.64);
+}
+
+a {
+    color: #0d89a5;
+}
+
+
+.btn-download {
+  background-color: rgba(0, 108, 255, 0.81); 
+  border: none;
+  color: white;
+  padding: 8px 8px;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: -3px;
+}
+
+.btn-download:hover {
+  background-color: RoyalBlue;
+}
+
+.filename h5{
+    color: rgb(123, 180, 169);
+    
+}
+
+a.download-link {
+    color: #fff;
+}
+
+
+.table th {
+    font-weight: bolder;
+    font-size: 18px;
+    color: rgba(255, 255, 255);
+    background-color: #4c91ef;
+}
+
+
+.table tr {
+    font-size: small;
+    color: rgba(41, 0, 134, 0.7);
+}
+
+.dataTables_length {
+    padding-left: 15px;
+}
+
+.dataTables_filter {
+    padding-right: 15px;
+}
+
+.dataTables_info {
+    padding-left: 15px;
+    font-weight: normal;
+}
+
+.dataTables_paginate paging_simple_numbers {
+    padding-right: 10px;
+}
+
+
+
+a.page-link {
+    color:  rgba(0, 108, 255, 0.81);
+}
+
+.page-item.active .page-link {
+
+    background-color: rgba(81, 0, 160, 0.64);
+    border-color: rgba(81, 0, 160, 0.64);
+}
+
+select {
+    background-color: #4c91ef;
+    color: #fff;
+    border-color: #fff;
+}
+
+select option {
+    font-weight: normal;
+}
+
+/*
+a.email-us{
+    
+    position: relative;
+    font-size: 18px;
+}
+
+a:not([href]):not([tabindex]) {
+    color: rgba(255, 0, 0, 0.64);
+}
+
+#emailModal li {
+    font-weight: 100;
+    color: red;
+}*/
+
+#popup {
+    text-align: center;
+    font-weight: bold;
+    color: rgba(255, 21, 21, 0.73);
+    
+}
+
+#about {
+    background-color: rgba(106, 169, 172, 0);
+    color: rgba(81, 0, 160, 0.64);
+    text-align: center;
+    font-style: oblique;
+}
+
+.contracted-hp{
+    text-align: center;
+    color: rgba(28, 159, 255, 0.91);
+}
+
+.card-deck {
+    width: 90%;
+    align-items: flex-end;
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    
+}
+.card {
+    border: none;
+    
+}
