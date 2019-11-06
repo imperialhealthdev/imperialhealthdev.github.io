@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-   setTimeout(function() {
-  $("#popup").fadeOut().empty();
-}, 4000);
     
      var table = $('#table').DataTable({
           "ordering": false,
@@ -17,27 +14,39 @@ $(document).ready(function(){
               document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
              });       
           },
-         "initComplete" : function() {
-      this.api().columns([1, 2]).every(function() {
-        var column = this;
-        var th = $("#filters").find("th").eq(column.index());
-        var select = $('<select><option value="">' + th.text() + '</option></select>')
-          .on('change', function() {
-            var val = $.fn.dataTable.util.escapeRegex(
-              $(this).val());
+initComplete: function () {
+        
+            this.api().columns().every(function () {
+                var column = this;
 
-            column.search(val ? '^' + val + '$' : '', true, false)
-              .draw();
-          });
-        $(th).replaceWith($("<th>", {html: select}));
+                if (column.index() == 0) {
+                    
+                    input = $('<input type="text" />').appendTo($(column.header())).on('keyup change', function () {
+                        if (column.search() !== this.value) {
+                            column.search(this.value)
+                                .draw();
+                        }
+                    });
+                    return;
+                }
 
-        console.log(select);
+                var select = $('<select><option value=""></option></select>')
+                    .appendTo($("#filters").find("th").eq(column.index()))
+                    .on('change', function () {
+                    var val = $.fn.dataTable.util.escapeRegex(
+                    $(this).val());                                     
 
-        column.data().unique().sort().each(function(d, j) {
-          $(select).append('<option value="' + d + '">' + d + '</option>')
-        });
-      });
-    },
+                    column.search(val ? '^' + val + '$' : '', true, false)
+                        .draw();
+                });
+                
+                console.log(select);
+
+                column.data().unique().sort().each(function (d, j) {
+                    select.append('<option value="' + d + '">' + d + '</option>')
+                });
+            });
+        },
            "columns"     :     [  
                 {     "data"     :     "Name", },  
                 {     "data"     :     "Provider Type"},

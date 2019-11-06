@@ -1,12 +1,11 @@
 
 *{
-    font-family: Montserrat , Courier New, Georgia, Candara;
-   
+    font-family: 'Montserrat' , sans-serif !important;
+    font-weight: 600;
 }
 
 body {
     padding-top: 100px;
-    
 }
 
 .careers-body {
@@ -14,15 +13,19 @@ body {
 }
 
 .search-body {
-    padding-top: 100px;
     background-color: #ffffff;
-    
+    height: 100%;
+}
+
+.navbar-brand {
+    margin-left: 15px;
 }
 
 .navbar-nav {
     font-size: 21px;
     font-weight: 200px;
     margin-top: 50px;
+    margin-right: 15px
 }
 
 .navbar-custom .navbar-nav .nav-link{
@@ -49,7 +52,19 @@ body {
 .page-footer { 
     color: #ffffff;
     background-color: rgba(81, 0, 160, 0.64);
-    width: 100%;    
+    width: 100%;
+    margin-top: 50px;
+}
+
+.page-footer-providersearch {
+    color: #ffffff;
+    background-color: rgba(81, 0, 160, 0.64);
+    width: 100%;
+      position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
 }
 
 .footer-copyright {
@@ -87,7 +102,7 @@ body {
         top: 0;
         left: 0;
         width: 100% !important;
-        height: 100% !important;
+        height: 150% !important;
     }
 
 .modal-content {
@@ -115,6 +130,23 @@ body {
 @media only screen and (max-width: 768px) {
 .modal-lg {
     max-width: 90% !important;
+    }
+    
+}
+
+@media only screen and (max-width: 1024px) {
+     .google-maps {
+       position: relative;
+        padding-bottom: 10%;
+        height: 150px;
+        overflow: hidden;
+    }
+.google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 140% !important;
     }
 }
 
@@ -163,6 +195,7 @@ a.download-link {
     color: #fff;
 }
 
+/*
 
 .table th {
     font-weight: bolder;
@@ -178,22 +211,23 @@ a.download-link {
 }
 
 .dataTables_length {
+    padding-top: 67px;
     padding-left: 15px;
 }
 
 .dataTables_filter {
+    padding-top: 67px;
     padding-right: 15px;
 }
 
 .dataTables_info {
-    padding-left: 15px;
+    padding-left: 20px;
     font-weight: normal;
 }
 
 .dataTables_paginate paging_simple_numbers {
-    padding-right: 10px;
+    padding-right: 50px;
 }
-
 
 
 a.page-link {
@@ -217,7 +251,8 @@ select option {
     background-color: rgba(81, 0, 160, 0.64);
 }
 
-/*
+
+
 a.email-us{
     
     position: relative;
@@ -252,14 +287,4 @@ a:not([href]):not([tabindex]) {
     color: rgba(28, 159, 255, 0.91);
 }
 
-.card-deck {
-    width: 90%;
-    align-items: flex-end;
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-    
-}
-.card {
-    border: none;   
-}
+
