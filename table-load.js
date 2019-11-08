@@ -1,72 +1,13 @@
-$(document).ready(function(){
 
-    
-     var table = $('#table').DataTable({
-          "ordering": false,
-          "fixedHeader": true,
-          "responsive": true,
-         "autoWidth": false,
-          "ajax"     :     "providers.json",
-          "drawCallback" : function(){
-          $('.paginate_button', this.api().table().container())          
-             .on('click', function(){
-              document.body.scrollTop = 0; // For Safari
-              document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-             });       
-          },
-initComplete: function () {
-        
-            this.api().columns().every(function () {
-                var column = this;
-
-                if (column.index() == 0) {
-                    
-                    input = $('<input type="text" />').appendTo($(column.header())).on('keyup change', function () {
-                        if (column.search() !== this.value) {
-                            column.search(this.value)
-                                .draw();
-                        }
-                    });
-                    return;
-                }
-
-                var select = $('<select><option value=""></option></select>')
-                    .appendTo($("#filters").find("th").eq(column.index()))
-                    .on('change', function () {
-                    var val = $.fn.dataTable.util.escapeRegex(
-                    $(this).val());                                     
-
-                    column.search(val ? '^' + val + '$' : '', true, false)
-                        .draw();
-                });
-                
-                console.log(select);
-
-                column.data().unique().sort().each(function (d, j) {
-                    select.append('<option value="' + d + '">' + d + '</option>')
-                });
-            });
-        },
-           "columns"     :     [  
-                {     "data"     :     "Name", },  
-                {     "data"     :     "Provider Type"},
-                {     "data"     :     "Specialty"},
-                {     "data"     :     "Address" },
-                {     "data"     :     "City"},
-                {     "data"     :     "State"},
-                {     "data"     :     "Zip"},
-                {     "data"     :     "Phone"}
-           ]
-      });
-    $(document).on('click','#table tr',function(e){
-    var row_object  = table.row(this).data();
-    var address         = table.row(this).data()['Address'];
-    var city        = table.row(this).data()['City'];
-    var state       = table.row(this).data()['State'];
-    var zip        = table.row(this).data()['Zip'];
-    var mapsearch = address.concat('+') + city.concat('+') + state.concat('+') + zip;
-        window.open("http://maps.google.com/?q="+mapsearch)
-    });
-    
-    
-});
+$('.main-app').mouseover(()=>{
+            $('.search-bar').css("width", "50%")
+            $('.search-bar').css("padding" ,"20px")
+            $('.submit').css("font-size", "3vw")
+            $('.submit').css( "color", "rgba(81, 0, 160, 0.64)")
+         })
+         $('.main-app').mouseout(()=>{
+            $('.search-bar').css("width", "0%", "padding" ,"0px")
+            $('.submit').css("font-size", "5vw")
+            $('.search-bar').css("padding" ,"0px")
+            $('.submit').css( "color", "rgba(81, 0, 160, 0.64)")
+         })

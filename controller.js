@@ -1,6 +1,8 @@
 var app = angular.module('myApp', []);
-app.controller('providerCtrl', function($scope, $http) {
-  $http.get("/providers.json").then(function(response) {
-    $scope.myData = response.data.records;
+app.controller('providersCtrl', function($scope, $http) {
+  $http.get("https://imperialhealthdev.github.io/providers.json").then(function(response) {
+    $scope.myData = response.data.data;
   });
+    $scope.quantity = 10;
 });
+

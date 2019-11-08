@@ -195,79 +195,6 @@ a.download-link {
     color: #fff;
 }
 
-/*
-
-.table th {
-    font-weight: bolder;
-    font-size: 18px;
-    color: #fff;
-    background-color: rgba(81, 0, 160, 0.64);
-}
-
-
-.table tr {
-    font-size: small;
-    color: rgba(0, 108, 255, 0.81);
-}
-
-.dataTables_length {
-    padding-top: 67px;
-    padding-left: 15px;
-}
-
-.dataTables_filter {
-    padding-top: 67px;
-    padding-right: 15px;
-}
-
-.dataTables_info {
-    padding-left: 20px;
-    font-weight: normal;
-}
-
-.dataTables_paginate paging_simple_numbers {
-    padding-right: 50px;
-}
-
-
-a.page-link {
-    color:  rgba(0, 108, 255, 0.81);
-}
-
-.page-item.active .page-link {
-
-    background-color: rgba(81, 0, 160, 0.64);
-    border-color: rgba(81, 0, 160, 0.64);
-}
-
-select {
-    background-color: rgba(129, 41, 214, 0.64);
-    color: #ffffff;
-    border-color: #fff;
-}
-
-select option {
-    font-weight: normal;
-    background-color: rgba(81, 0, 160, 0.64);
-}
-
-
-
-a.email-us{
-    
-    position: relative;
-    font-size: 18px;
-}
-
-a:not([href]):not([tabindex]) {
-    color: rgba(255, 0, 0, 0.64);
-}
-
-#emailModal li {
-    font-weight: 100;
-    color: red;
-}*/
-
 #popup {
     text-align: center;
     font-weight: bold;
@@ -285,6 +212,34 @@ a:not([href]):not([tabindex]) {
 .contracted-hp{
     text-align: center;
     color: rgba(28, 159, 255, 0.91);
+ 
 }
-
-
+button:focus, input:focus{
+   outline: none;
+}
+.main-app{
+   top: 50%;
+   transform: translateY(50vh);
+   margin-top: -450px;
+ 
+    
+}
+.submit{
+   background: transparent;
+   border: none;
+   font-size: 5vw;
+   transition: .5s ease-in-out;
+   color: #fff;
+}
+.search-bar{
+   background: transparent;
+   width: 0%;
+   height: 5vh;
+   border: none;
+   font-size: ;
+   color: #000;
+   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+   border-bottom: 2px solid rgba(81, 0, 160, 0.64);
+   transition: width .5s ease-in-out, 
+   padding .2s ease-in-out;
+}
