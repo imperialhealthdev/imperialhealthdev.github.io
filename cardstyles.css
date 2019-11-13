@@ -1,0 +1,88 @@
+.container {
+	 max-width: 1280px;
+	 margin: 0 auto;
+     
+}
+ .container .page-wrapper {
+	 font-family: 'Roboto Condensed', sans-serif;
+}
+ .container .page-wrapper .box {
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: flex-start;
+	 align-items: center;
+	 flex-wrap: wrap;
+}
+ .container .page-wrapper .box .box-item {
+	 position: relative;
+	 flex-basis: calc(100% / 3 - 80px);
+	 padding: 20px;
+	 transition: box-shadow 0.25s ease-in;
+	 box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+	 margin: 15px 20px;
+}
+ .container .page-wrapper .box .box-item:hover {
+	 box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.15);
+}
+ .container .page-wrapper .box .box-item:hover:before {
+	 background: rgba(81, 0, 160, 0.64);
+	 width: 100%;
+}
+ .container .page-wrapper .box .box-item:before {
+	 height: 6px;
+	 width: 6%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 display: block;
+	 content: '';
+	 background: rgba(81, 0, 160, 0.64);
+	 transition: width 0.35s;
+}
+ .container .page-wrapper .box .box-item-content .category {
+	 font-size: 16px;
+	 color: rgba(81, 0, 160, 0.64);
+	 text-align: left;
+	 font-weight: 500;
+	 display: inline-block;
+	 margin-bottom: 15px;
+}
+ .container .page-wrapper .box .box-item-content .header {
+	 font-size: 18px;
+	 color: #221f20;
+	 text-align: left;
+	 font-weight: 600;
+	 margin-bottom: 15px;
+}
+ .container .page-wrapper .box .box-item-content .info-text {
+	 font-size: 16px;
+	 font-weight: 400;
+	 font-weight: 400;
+	 margin-bottom: 15px;
+}
+ .container .page-wrapper .box .box-item-content .btn {
+	 padding: 5px 5px;
+	 font-size: 16px;
+	 color: #fff;
+	 text-align: center;
+	 font-weight: 700;
+	 display: inline-block;
+	 background-color: rgba(81, 0, 160, 0.64);
+	 border-radius: 5px;
+	 float: right;
+}
+ @media all and (max-width: 1100px) {
+	 .container .page-wrapper .box .box-item {
+		 flex-basis: calc(100% / 2 - 40px);
+	}
+}
+ @media all and (max-width: 768px) {
+	 .container .page-wrapper .box .box-item {
+		 flex-basis: calc(100% / 1 - 40px);
+	}
+}
+ 
+.box {
+    list-style: none;
+}

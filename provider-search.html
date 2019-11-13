@@ -9,9 +9,9 @@
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="cardstyles.css">
   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Montserrat'>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/fh-3.1.6/datatables.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
     
 <body class="search-body" ng-app="myApp" ng-controller="providersCtrl">
@@ -39,7 +39,6 @@
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="font-weight: 500">Provider Resources</a>
     <div class="dropdown-menu">
       <a class="dropdown-item" data-toggle="modal" data-target="#providerModal">Provider Documents/Forms</a>
-     
     </div>
   </li>
       <li class="nav-item">
@@ -55,33 +54,93 @@
     <span class="ml-auto navbar-text">
   </div>
 </nav>
-<br>
-
-<div class="main-app">
-      <input ng-model="query" type="text" class="search-bar">
-      <button class="submit"><i class="fas fa-search"></i></button>
-   </div> 
+<br><br><br>
       
-<div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <ul class="list">
-  <li ng-repeat="x in myData | filter:query | limitTo:quantity">
-    <h3>{{ x.Name}}</h3>
-  </li>
-</ul>
-</div>   
+<!-- Search Bar -->
+<div class="container">
+<div class="row">      
+<div class="col-lg offset-md-" id="container">
+ <div class="input-group mb-2" id="searchdiv">
+    <input ng-model="query" type="text" class="form-control" placeholder="Search" aria-label="Search" id="search-box">
+    <div class="input-group-append">
+        <span class="input-group-text"><i class="fa fa-search"></i></span>
+    </div>
+ </div>
+    </div>
+</div>
+<!-- Drop Down Filters -->
+    <!-- Specialty Drop Down Filter -->
 
+<div class="row">
+  <div class="col-sm">
+      <div class="btn-group">
+      <select ng-model="select.specialty" ng-options="option.Specialty for option in myData | unique:'Specialty' | orderBy:'Specialty'" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+      <option value="">Specialty</option>
+    </select>  
+      </div>  
+
+      <!-- City Drop Down Filter -->
+
+      <div class="btn-group">
+<select ng-model="select.city" ng-options="option.City for option in myData | unique:'City' | orderBy:'City'" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+      <option value="">City</option>
+    </select>  
+      </div>  
+
+      <!-- State Drop Down Filter -->
+
+      <div class="btn-group">
+<select ng-model="select.state" ng-options="option.State for option in myData | unique:'State' | orderBy:'State'" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+      <option value="">State</option>
+    </select>  
+      </div>  
+
+      <!-- County Drop Down Filter -->
+
+      <div class="btn-group">
+<select ng-model="select.county" ng-options="option.County for option in myData | unique:'County' | orderBy:'County'" id="dropdown" name="dropdown" class="btn dropdown">
+      <option value="">County</option>
+    </select>  
+      </div>
       
+  </div>
+    
+</div>  
+</div>
+
+    
+      
+<div class="container">
+  <div class="page-wrapper">
+                <ul class="box">
+                    <li class="box-item" ng-repeat="x in myData | limitTo:quantity | filter:query |filter:select">
+                        <div class="box-item-content">
+                            <span class="category">{{x.Specialty}}</span>
+                            <h6 class="header">{{x.Name}}</h6>
+                              <h7 class="info-text">{{x.Address}}</h7>
+                              <br>
+                              <h7 class="info-text">{{x.City}} , {{x.State}} , {{x.Zip}}</h7>
+                              <br>
+                              <h7 class="info-text">{{x.Phone}}</h7>
+                              <br><br>
+                            <a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fa-map-marker"></i></a>
+                        </div>
+                    </li>
+                </ul>
+    </div>
+</div>
+            
       
 <!-- Scripts -->  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
- <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/fh-3.1.6/datatables.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>      
-<script src="controller.js"></script>
-<script src="table-load.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>      
+  <script src="controller.js"></script>
+      
 <script> 
 $(function(){
   $("#modal-content").load("modals.html"); 

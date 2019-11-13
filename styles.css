@@ -53,18 +53,16 @@ body {
     color: #ffffff;
     background-color: rgba(81, 0, 160, 0.64);
     width: 100%;
-    margin-top: 50px;
+    
 }
 
 .page-footer-providersearch {
     color: #ffffff;
     background-color: rgba(81, 0, 160, 0.64);
     width: 100%;
-      position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  
+    right: 0;
+    bottom: 0;
+    left: 0;  
 }
 
 .footer-copyright {
@@ -195,51 +193,51 @@ a.download-link {
     color: #fff;
 }
 
-#popup {
-    text-align: center;
-    font-weight: bold;
-    color: rgba(255, 21, 21, 0.73);
-    
-}
-
-#about {
-    background-color: rgba(106, 169, 172, 0);
-    color: rgba(81, 0, 160, 0.64);
-    text-align: center;
-    font-style: oblique;
-}
-
 .contracted-hp{
     text-align: center;
     color: rgba(28, 159, 255, 0.91);
  
 }
-button:focus, input:focus{
-   outline: none;
+
+.card{
+    border: none;
 }
-.main-app{
-   top: 50%;
-   transform: translateY(50vh);
-   margin-top: -450px;
- 
-    
+
+#search-box {
+  border-color: rgba(81, 0, 160, 0.64);
+  height: 50px;
+  
 }
-.submit{
-   background: transparent;
-   border: none;
-   font-size: 5vw;
-   transition: .5s ease-in-out;
-   color: #fff;
+
+.input-group-text {
+  background-color:  rgba(81, 0, 160, 0.64);
+  color: black;
+  height: inherit;
 }
-.search-bar{
-   background: transparent;
-   width: 0%;
-   height: 5vh;
-   border: none;
-   font-size: ;
-   color: #000;
-   font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
-   border-bottom: 2px solid rgba(81, 0, 160, 0.64);
-   transition: width .5s ease-in-out, 
-   padding .2s ease-in-out;
+
+#dropdown option {
+    font-weight: normal;
+    background-color: rgba(250, 250, 250, 0.64);
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+background-color:  rgba(255, 255, 255, 0.64);
+color: #000;
+border-color: rgba(81, 0, 160, 0.64);
+}
+
+
+.btn-group {
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-top: 5px;
+}
+
+.dropdown-menu {         
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu.show {
+    border-color: rgba(81, 0, 160, 0.64);
 }
