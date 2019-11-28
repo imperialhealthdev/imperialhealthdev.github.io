@@ -1,11 +1,14 @@
 
 *{
-    font-family: 'Montserrat' , sans-serif !important;
-    font-weight: 600;
+    font-family: 'Montserrat', Arial, Georgia , sans-serif !important;
+    
 }
 
+html {
+    
+}
 body {
-    padding-top: 100px;
+    padding-top: 170px;
 }
 
 .careers-body {
@@ -17,98 +20,123 @@ body {
     height: 100%;
 }
 
+.contact-body {
+    padding-top: 200px;
+    
+}
+
 .navbar-brand {
     margin-left: 15px;
 }
 
 .navbar-nav {
     font-size: 21px;
-    font-weight: 200px;
+    font-weight: bold;
     margin-top: 50px;
     margin-right: 15px
 }
 
 .navbar-custom .navbar-nav .nav-link{
-    color: rgba(81, 0, 160, 0.64);
+    color: rgba(116, 68, 204, 0.72);
 }
 
 .navbar-custom {
     background-color: #ffffff;
+    
 }
-
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(116, 68, 204, 0.72);
+}
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: #86d3c4;
+    color: rgba(116, 68, 204, 0.72);
     text-decoration: underline;
     transform: scale(1.1);
 }
 
 .carousel-inner img {
-      width: 100%;
+      width: 80%;
       height: 100%;
   }
 .page-footer { 
-    color: #ffffff;
-    background-color: rgba(81, 0, 160, 0.64);
+        color: #ffffff;
+    background-color: rgb(154, 117, 222);
     width: 100%;
-    
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: relative;
 }
 
 .page-footer-providersearch {
     color: #ffffff;
-    background-color: rgba(81, 0, 160, 0.64);
+    background-color: rgba(116, 68, 204, 0.72);
     width: 100%;
     right: 0;
     bottom: 0;
-    left: 0;  
+    left: 0;
+    position: fixed;
+}
+
+.page-footer-contact {
+    color: #ffffff;
+    background-color: rgba(116, 68, 204, 0.72);
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+     
+    
 }
 
 .footer-copyright {
     font-weight: 200;
-} 
+}
 
+#footer-links {
+    text-align: center;
+}
+
+#footer-links a{
+    color: #fff;
+}
 .carousel-inner {
-    height: 845px;
-
+    max-height: 690px;
 }
 
-@media only screen and (max-width: 1146px) {
-  .carousel-inner {
-    height: 100%;
- }
-    
-    .table-responsive {
-        height: 100%; 
-    }
-    
-    .indeedjobs-widget{
-        height: 100%;
-    }
-    
-}
-
-.google-maps {
-       position: relative;
-        padding-bottom: 10%;
-        height: 100%;
-        overflow: hidden;
-    }
-.google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 150% !important;
-    }
 
 .modal-content {
     background-color:#ffffff; 
+    color: rgb(0, 0, 0);
+}
+
+#HIPPAbody h4, #HIPPAbody h5{
+    font-weight: bold;
+    color: rgba(0, 39, 255, 0.7);
+}
+
+#HIPPAbody h7{
+    color: rgb(0, 0, 0);
+}
+
+#TOSbody h4, #TOSbody h5{
+    font-weight: bold;
+    color: rgba(0, 39, 255, 0.7);
+}
+}
+
+#TOSbody h7{
+    color: rgb(0, 0, 0);
+}
+
+#AnncModal h5 {
+    rgb(0, 88, 255);
 }
 
 .modal-header h4 , h5{
-    color: rgba(81, 0, 160, 0.64);  
+    color: rgb(0, 0, 0);
 }
 
 .modal-body button {
@@ -121,32 +149,53 @@ body {
     font-weight: bold;
 }
 
+
 .modal-content h5 {
     rgba(129, 0, 255, 0.64);  
 }
 
-@media only screen and (max-width: 768px) {
-.modal-lg {
-    max-width: 90% !important;
+
+@media only screen and (max-width: 414px) {
+     #contact-container {
+        width: 100%;
+    }
+    .contact-body {
+        width: 510px;
     }
     
+    #providerModal {
+      overflow;
+    }
+
 }
 
-@media only screen and (max-width: 1024px) {
-     .google-maps {
-       position: relative;
-        padding-bottom: 10%;
-        height: 150px;
-        overflow: hidden;
-    }
-.google-maps iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 140% !important;
+@media only screen and (max-width: 768px) {
+    .modal-lg {
+        max-width: 90% !important;
+    }   
+    
+    #contact-container {
+        width: 500px;
     }
 }
+
+
+@media only screen and (max-width: 1146px) {
+    
+    .indeedjobs-widget{
+        height: 100%;
+    }
+        
+}
+
+
+@media only screen and (max-width: 1400px) {
+    
+   .carousel-caption {
+        display: none;
+    }
+}
+
 
 .indeedjobs-widget {
     padding-left: 90px;
@@ -156,17 +205,18 @@ body {
     height: 60%;
 }
 
+
 .navbar-light .navbar-text a {
     color: rgba(0, 108, 255, 0.81);  
 }
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: rgba(81, 0, 160, 0.64);
+    background-color: rgba(116, 68, 204, 0.72);
 }
 
 a {
-    color: #0d89a5;
+    color: rgb(0, 88, 255);
 }
 
 
@@ -178,41 +228,60 @@ a {
   cursor: pointer;
   font-size: 13px;
   margin-top: -3px;
+      
 }
 
 .btn-download:hover {
-  background-color: RoyalBlue;
+  background-color: #28a745;
+    cursor: pointer;
 }
 
 .filename h5{
-    color: rgb(123, 180, 169);
+    color:  rgb(0, 88, 255);
+    font-weight: 100;
+}
+
+
+a.download-link {
+    color:  #fff;
+}
+
+#contact-container {
+  padding: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: #54566f;
+    max-width: 900px;
+}
+
+#contact-container h3, #contact-container h5 {
+    color: rgba(0, 116, 126, 0.72);
+    font-weight: bold;
+}
+
+#contact-container li {
+    list-style: none;
+    font-size: large;
     
 }
 
-a.download-link {
-    color: #fff;
-}
-
-.contracted-hp{
-    text-align: center;
-    color: rgba(28, 159, 255, 0.91);
- 
-}
-
-.card{
-    border: none;
-}
-
 #search-box {
-  border-color: rgba(81, 0, 160, 0.64);
-  height: 50px;
-  
+  border-color: rgba(116, 68, 204, 0.72);
+  height: 60px;
+  width: 70%;
 }
 
 .input-group-text {
-  background-color:  rgba(81, 0, 160, 0.64);
+  background-color:  rgba(116, 68, 204, 0.72);
   color: black;
   height: inherit;
+}
+
+.input-group-text h7 {
+    color: #fff;
+}
+
+.fa {
+    color: #fff;
 }
 
 #dropdown option {
@@ -223,14 +292,29 @@ a.download-link {
 .btn-group-vertical>.btn, .btn-group>.btn {
 background-color:  rgba(255, 255, 255, 0.64);
 color: #000;
-border-color: rgba(81, 0, 160, 0.64);
+border-color: rgba(116, 68, 204, 0.72);
+width: 210px;
+border-bottom-left-radius: 15px;
+border-top-left-radius: 15px;
 }
 
+#filternames{
+padding-top: 5px;
+float: right;
+white-space: pre;    
+color: #000000;
+font-weight: 100;
+font-size: 17px;
+text-align: left;
+}
+
+#clear-filter {
+    float: left;
+}
 
 .btn-group {
-    margin-left: 5px;
-    margin-right: 0px;
-    margin-top: 5px;
+    margin-top: 15px;
+    float: right;
 }
 
 .dropdown-menu {         
@@ -239,5 +323,60 @@ border-color: rgba(81, 0, 160, 0.64);
 }
 
 .dropdown-menu.show {
-    border-color: rgba(81, 0, 160, 0.64);
+    border-color: rgba(116, 68, 204, 0.72);
 }
+
+#filtermodaldialog{
+    width: 360px;
+    padding-top: 15%;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 37%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(116, 68, 204, 0.72);
+  text-align: center;
+  font-size: 28px;
+}
+
+.carousel-item button {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(32, 144, 255);
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.carousel-item button:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+#health-plans {
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#health-plans h5 {
+    color: rgb(0, 88, 255);
+    font-weight: 100;
+    
+}
+.table-head {
+    text-align: center;
+    background-color: rgba(116, 68, 204, 0.72);
+    color: #fff;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+

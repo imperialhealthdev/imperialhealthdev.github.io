@@ -32,112 +32,98 @@
         <a class="nav-link" href="provider-search.html">Find a doctor</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a>
+        <a class="nav-link">Members</a>
       </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link" data-toggle="modal" data-target="#providerModal">Provider Resources</a>
+      </li>    
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Provider Resources</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Provider Portal</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" data-toggle="modal" data-target="#providerModal">Provider Documents/Forms</a>
+      <a class="dropdown-item" href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="_blank">Provider Portal</a>
+      <a class="dropdown-item" href="pdfs/EZ-Net-Portal-Guide-102019.pdf" target="_blank">EZ-NET Portal Guide</a>
+      <a class="dropdown-item" href="pdfs/Web-Portal-Application.pdf" target="_blank">Web Portal Application</a>
     </div>
   </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="_blank">Provider Portal</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="careers.html">Careers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#contactModal">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
     <span class="ml-auto navbar-text">
   </div>
 </nav>
 <br>
-<!-- Header Carousel -->      
+<!-- Header Carousel -->
+      
 <div id="demo" class="carousel slide" data-ride="carousel">
-
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
   
   <!-- The slideshow -->
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../icons/baby-and-family.jpg" alt="Baby" width="1100" height="400">
-        
-    </div>
-    <div class="carousel-item">
-      <img src="../icons/family-jumping.jpg" alt="family-jumping" width="1100" height="400">
-    </div>
-    <div class="carousel-item">
-      <img src="../icons/couple-daylight-elderly-1589865.jpg" alt="elderly couple" width="1100" height="400">
+    <div class="carousel-item active">      
+      <img src="/icons/family.jpg" alt="happyfamily" class="rounded mx-auto d-block">
+      <div class="carousel-caption">
+        <p>Delivering valuable care so that our members are healthy in  body, mind and spirit to achieve their inherent potential</p>
+      </div>
+        <button type="button" class="btn mx-auto d-block" id="annoucements" data-toggle="modal" data-target="#announcementsModal">
+  Announcements <span class="badge badge-light">3</span>
+</button>
     </div>
   </div>
-  
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div> 
+     
+</div>       
 
- <!-- About Section -->
-      
- <div class="container-fluid" id="about">
-    <div class="col-md-12">
-        <br><br>
-        <p class="lead">Our Mission: <q>Deliver valuable care so that our members are healthy in  body, mind and spirit to achieve their inherent potential.</q></p>
-        <p class="lead">Our Vision: <q>Deliver value based care that is clinically effective, sustainable and achieves exceptional outcomes.</q></p>
-        <br><br>
-    </div>
-</div>
 
 <!-- Our Contracted Health Plans -->
-<div class="contracted-hp"><h1>Our Contracted Health Plans</h1></div>
+
 <br><br>
 
-<div class="card-deck">
-    <div class="card">
-         <img class="card-img-top" src="../icons/AHP_Logo.png" alt="alignment logo"/>  
-    </div>
-    <div class="card">
-         <img class="card-img-top" src="../icons/abc_logo.png" alt="anthem bluecross logo"/>
-    </div>
-    <div class="card">
-          <img class="card-img-top" src="../icons/bsc-logo-lg.png" alt="blue shield logo"/>
-    </div>
-    <div class="card">
-         <img class="card-img-top" src="../icons/brandlogo.png" alt="brand new day logo"/>
-    </div>  
-    <div class="card">
-        <img class="card-img-top" src="../icons/choicehealthlogo.png" alt="central health logo"/>
-    </div>
-    <div class="card">
-         <img class="card-img-top" src="../icons/easychoicelogo.png" alt="easy choice logo"/>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="../icons/humanalogo.png" alt="humana logo"/>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src="../icons/ihp-logo.png" alt="imperial health plan logo"/>
-    </div>
-</div>
- 
-
+<div class="container">
+          
+  <table class="table table-hover table-bordered" id="health-plans">
+    <tbody>
+        <thead>
+            <tr>
+                <h4 class="table-head">Contracted Health Plans</h4>
+            </tr>
+        </thead>
+      <tr>
+        <td><a href="https://www.alignmenthealthplan.com/" target="_blank"><h5 >Alignment</h5></a></td>
+      </tr>
       
+     <tr>
+        <td><a href="https://www.anthem.com/" target="_blank"><h5>Anthem BlueCross</h5></a></td>
+      </tr>
+      
+      <tr>
+        <td><a href="https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_en/bsp/home?utm_source=display&utm_medium=mailer&utm_campaign=promisewcm&utm_content=home" target="_blank"><h5>Blue Shield Promise</h5></a></td>
+      </tr>
+      
+      <tr>
+        <td><a href="https://bndhmo.com/" target="_blank"><h5>Brand New Day</h5></a></td>
+      </tr>
+      
+      <tr>
+        <td><a href="https://www.centralhealthplan.com/" target="_blank"><h5>Central Health</h5></a></td>
+      </tr>
+      
+      <tr>
+        <td><a href="https://www.wellcare.com/california" target="_blank"><h5>Easy Choice</h5></a></td>
+      </tr>
+      
+      <tr>
+        <td><a href="https://www.humana.com/" target="_blank"><h5>Humana</h5></a></td>
+      </tr>
+      
+      <tr>
+        <td><a href="https://www.imperialhealthplan.com/california/" target="_blank"><h5>Imperial Health Plan</h5></a></td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
 <br><br>
 <!-- /.container -->
-<!-- Google Maps iframe embed -->  
-<div class="google-maps">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.416950038303!2d-118.13356638447823!3d34.13567342077561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c4a093ac263d%3A0xaa9fb5ccd0308630!2s600%20S%20Lake%20Ave%20%23303%2C%20Pasadena%2C%20CA%2091106!5e0!3m2!1sen!2sus!4v1572474549557!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-</div>  
-      
+
 <!-- Scripts -->    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -157,6 +143,12 @@ $(function(){
  <!-- Copyright ------->  
   <div class="footer-copyright text-center py-3">© 2019 Copyright: Imperial Health Holdings<br>
 600 South Lake Avenue Suite 303, Pasadena, CA 91106</div>
+    
+    <div class="row" id="footer-links">
+  <div class="col"><h5><a href="careers.html">Careers</a></h5></div>
+  <div class="col"><h5><a href="" data-toggle="modal" data-target="#HIPPAModal">HIPPA</a></h5></div>
+        <div class="col"><h5><a href="" data-toggle="modal" data-target="#TOSModal">Terms of Service</a></h5></div>
+</div>
 </footer>
     
       <!-- Inject modal content -->

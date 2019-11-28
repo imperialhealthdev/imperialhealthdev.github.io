@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   
 <head>
   <title>Imperial Health Holdings</title>
   <link rel="shortcut icon" href="/icons/ihh-logo-small.png"/>
@@ -33,87 +33,123 @@
         <a class="nav-link" href="provider-search.html">Find a doctor</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#disclaimerModal">Disclaimer</a>
+        <a class="nav-link" >Members</a>
       </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#providerModal">Provider Resources</a>
+      </li>    
 <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="font-weight: 500">Provider Resources</a>
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Provider Portal</a>
     <div class="dropdown-menu">
-      <a class="dropdown-item" data-toggle="modal" data-target="#providerModal">Provider Documents/Forms</a>
+      <a class="dropdown-item" href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="_blank">Provider Portal</a>
+      <a class="dropdown-item" href="pdfs/EZ-Net-Portal-Guide-102019.pdf" target="_blank">EZ-NET Portal Guide</a>
+      <a class="dropdown-item" href="pdfs/Web-Portal-Application.pdf" target="_blank">Web Portal Application</a>
     </div>
   </li>
       <li class="nav-item">
-        <a class="nav-link" href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="_blank">Provider Portal</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="careers.html">Careers</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#contactModal">Contact</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </li>
     </ul>
     <span class="ml-auto navbar-text">
   </div>
 </nav>
-<br><br><br>
+<br><br>
       
-<!-- Search Bar -->
-<div class="container">
-<div class="row">      
-<div class="col-lg offset-md-" id="container">
- <div class="input-group mb-2" id="searchdiv">
-    <input ng-model="query" type="text" class="form-control" placeholder="Search" aria-label="Search" id="search-box">
+<!-- Search Bar / Filters Container -->
+<div class="container" id="searchfunction">
+    
+<div class="row">
+<!-- Search Bar -->    
+<div class="col-lg offset-md" id="container" style="padding-top: 20px;">
+ <div class="input-group mb" id="searchdiv">
+    <input ng-model="query" type="text" class="form-control" placeholder="Search..." aria-label="Search" id="search-box">
     <div class="input-group-append">
-        <span class="input-group-text"><i class="fa fa-search"></i></span>
+        <button data-toggle="modal" data-target="#FilterModal" class="input-group-text"><h7>Filters</h7></button>
     </div>
+    
  </div>
+    
     </div>
+     
 </div>
+    
 <!-- Drop Down Filters -->
-    <!-- Specialty Drop Down Filter -->
+
+  <!-- Filters Modal -->
+  <div class="modal fade" id="FilterModal" role="dialog">
+    <div class="modal-dialog" id="filtermodaldialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">   
+        <div class="modal-body">
+             
+    
 
 <div class="row">
-  <div class="col-sm">
+  <div class="col-lg offset-md">
+      
+      <!-- Specialty Drop Down Filter -->
       <div class="btn-group">
-      <select ng-model="select.specialty" ng-options="option.Specialty for option in myData | unique:'Specialty' | orderBy:'Specialty'" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-      <option value="">Specialty</option>
-    </select>  
-      </div>  
+      <h5 id="filternames">Specialty: </h5> <select ng-model="cc.Specialty" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            <option value=""> </option>
+            <option ng-repeat="option in myData | unique:'Specialty' | orderBy:'Specialty'">{{option.Specialty}}</option>
+        </select>
+      </div>
+        
+ 
 
       <!-- City Drop Down Filter -->
 
       <div class="btn-group">
-<select ng-model="select.city" ng-options="option.City for option in myData | unique:'City' | orderBy:'City'" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-      <option value="">City</option>
-    </select>  
-      </div>  
-
+        <h5 id="filternames">City: </h5> <select ng-model="cc.City" ng-init="cc.City" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            <option value=""> City</option>
+            <option ng-repeat="option in myData | unique:'City' | orderBy:'City'">{{option.City}}</option>
+        </select>
+      </div>
+      
+  
       <!-- State Drop Down Filter -->
-
+       
+      
       <div class="btn-group">
-<select ng-model="select.state" ng-options="option.State for option in myData | unique:'State' | orderBy:'State'" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-      <option value="">State</option>
-    </select>  
+        <h5 id="filternames">State: </h5> <select ng-model="cc.State" ng-init="cc.State" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            <option value=""> State</option>
+            <option ng-repeat="option in myData | unique:'State' | orderBy:'State'">{{option.State}}</option>
+        </select>
       </div>  
 
       <!-- County Drop Down Filter -->
 
       <div class="btn-group">
-<select ng-model="select.county" ng-options="option.County for option in myData | unique:'County' | orderBy:'County'" id="dropdown" name="dropdown" class="btn dropdown">
-      <option value="">County</option>
-    </select>  
+        <h5 id="filternames">County: </h5> <select ng-model="cc.County" ng-init="cc.County" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            <option value=""> County</option>
+            <option ng-repeat="option in myData | unique:'County' | orderBy:'County'">{{option.County}}</option>
+        </select>
+      </div>
+  </div>  
+ </div>
+    
+</div>     
+<div class="modal-footer">
+    
+          <button class="btn btn-danger" id="clear-filter" ng-click="clearFilter()" type="button">Clear Filters</button>
+    
+          <button type="button" class="btn btn-success" data-dismiss="modal" style="float: right;">Close</button>
+        </div>
       </div>
       
-  </div>
+    </div>
+  </div>      
     
-</div>  
 </div>
 
-    
       
-<div class="container">
-  <div class="page-wrapper">
+      
+<!-- Card Template where angular injects JSON data -->      
+<div class="container" id="cardbody">
+  <div class="page-wrapper" directive-when-scrolled="loadMore()">
                 <ul class="box">
-                    <li class="box-item" ng-repeat="x in myData | limitTo:quantity | filter:query |filter:select">
+                    <li class="box-item" ng-repeat="x in myData | filter:cc | filter:query | limitTo:quantity">
                         <div class="box-item-content">
                             <span class="category">{{x.Specialty}}</span>
                             <h6 class="header">{{x.Name}}</h6>
@@ -140,6 +176,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>      
   <script src="controller.js"></script>
+  <script src="ng-infinite-scroll.js"></script>      
       
 <script> 
 $(function(){
@@ -160,6 +197,13 @@ $(function(){
  <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2019 Copyright: Imperial Health Holdings<br>
 600 South Lake Avenue Suite 303, Pasadena, CA 91106</div>
+    
+        <div class="row" id="footer-links">
+  <div class="col"><h5><a href="careers.html">Careers</a></h5></div>
+  <div class="col"><h5><a href="" data-toggle="modal" data-target="#HIPPAModal">HIPPA</a></h5></div>
+        <div class="col"><h5><a href="" data-toggle="modal" data-target="#TOSModal">Terms of Service</a></h5></div>
+</div>
+    <br>
   <!-- Copyright -->
     
 </footer>

@@ -1,16 +1,23 @@
 <!-- Contact Modal -->
-    <div id="contactModal" class="modal fade" role="dialog">
+    <div id="HIPPAModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" id="HIPPAbody">
             <div class="modal-header">
-                <p class="text-center"><h4>Contact Information</h4></p>
+                <p class="text-center"><h4>HIPPA Compliance</h4></p>
             </div>
-            <div class="modal-body" id="contact-info-body">
-                <h6>Main Phone: (626) 838-5100</h6>
-                <h6>Main Fax:  (626) 521-6028</h6>
-                <h6>UM Fax: (626) 283-5021</h6>
-                <h6>Contracting/ Provider Services Fax : (626) 380-9142</h6>
-                <h6>Credentialing Fax: (626) 380-9963</h6>
+            <div class="modal-body" id="HIPPAbody">
+              <br>
+                
+                <h5>HIPAA</h5>
+<h7>IHHMG provides protection of it members’ personal health information (PHI), which includes Electronic Protected Health Information (“EPHI”)
+All activities related to HIPAA compliance and the privacy policies and procedures implemented to follow federal and state laws.<h7><br><br><br>
+    
+                <h5>Fraud Waste & Abuse</h5>
+<h7>Annual Fraud Waste & Abuse Training is required for the IHHMG Network, staff, Providers and Practitioners
+Reporting Fraud Waste & Abuse
+IHHMG has a no-tolerance policy for retaliation or retribution against any employee or subcontractor who in good faith reports suspected FWA.
+Anyone can report Fraud Waste and Abuse to IHHMG via email at <a href="mailto: hotline@imperialhealthholdings.com">hotline@imperialhealthholdings.com</a> or by phone to (626) 838-5100 or Toll-Free: (800) 497-5509.<h7><br><br>
+                
                 <button type="button" class="btn btn-success btn-m" data-dismiss="modal">Close</button> 
             </div>
         </div>
@@ -18,9 +25,9 @@
     </div>
             
         <!-- Disclaimer Modal -->
-    <div id="disclaimerModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg">
-        <div class="modal-content" style="padding-left: 25px; padding-right: 25px;">
+    <div id="TOSModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content" id="TOSbody" style="padding-left: 25px; padding-right: 25px;">
             <div class="modal-body">
 <br><br><br>                  
 <h5>Confidentiality</h5><br>
@@ -67,21 +74,63 @@ The UM Department’s direct fax number is (626) 283-5021.
 <h5>Eligibility and Enrollment Inquiries</h5>
 <h7>Contact your Health Plan Member Service Department<h7><br><br><br>
 
-<h5>Fraud Waste & Abuse</h5>
-<h7>Annual Fraud Waste & Abuse Training is required for the IHHMG Network, staff, Providers and Practitioners
-Reporting Fraud Waste & Abuse
-IHHMG has a no-tolerance policy for retaliation or retribution against any employee or subcontractor who in good faith reports suspected FWA.
-Anyone can report Fraud Waste and Abuse to IHHMG via email at <a href="mailto: hotline@imperialhealthholdings.com">hotline@imperialhealthholdings.com</a> or by phone to (626) 838-5100 or Toll-Free: (800) 497-5509.<h7><br><br><br>
-
-<h5>HIPAA</h5>
-<h7>IHHMG provides protection of it members’ personal health information (PHI), which includes Electronic Protected Health Information (“EPHI”)
-All activities related to HIPAA compliance and the privacy policies and procedures implemented to follow federal and state laws.<h7><br><br><br>
     
                 <button type="button" class="btn btn-success btn-m" data-dismiss="modal">Close</button> 
             </div>
         </div>
       </div>
     </div>
+    
+<!-- Annoucements Modal -->
+
+<div id="announcementsModal" class="modal fade" role="dialog">
+     <div class="modal-dialog modal-lg">
+        <div class="modal-content" id="AnncModal" style="padding-left: 25px; padding-right: 25px;">
+            <div class="modal-body">
+                               
+    
+    <!-- Announcements Tab  Info -->
+  <div class="tab-pane fade show active" id="pills-announcements" role="tabpanel" aria-labelledby="pills-announcements-tab">
+      <br>
+      <div class="container">   
+  <table class="table table-hover">
+    <tbody>
+        
+      <tr>
+       <td class="filename">
+           <a class="download-link" href="pdfs/UMIndependenceAffirmationMemotonetwork.pdf" target="_blank">
+               <h5>Utilization Management Independence Affirmation Memo to Network</h5>
+           </a>
+        </td>   
+      </tr>
+        
+      <tr>
+       <td class="filename">
+           <a class="download-link" href="pdfs/Hill-Authorization-transitiion.pdf" target="_blank">
+                <h5>Hill Authorization Transition</h5>
+           </a>
+       </td>       
+      </tr>
+        
+     <tr>
+      <td class="filename">     
+            <a class="download-link" href="pdfs/HPMS-Disaster-Provider-Access-Memo-9-29-2017.pdf" target="_blank">
+                <h5>HPMS Disaster Provider Access Memo</h5>
+            </a>
+       </td>      
+      </tr>
+        
+    </tbody>
+  </table>
+</div>
+    </div>
+    
+       
+                <button type="button" class="btn btn-success btn-m" data-dismiss="modal">Close</button> 
+            </div>
+        </div>
+      </div>
+ </div>       
     
 <!-- Provider Resource Material Modal -->
  <div id="providerModal" class="modal fade" role="dialog">
@@ -92,10 +141,7 @@ All activities related to HIPAA compliance and the privacy policies and procedur
 <!-- Tab Names and Size -->                
 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" id="pills-announcements-tab" data-toggle="pill" href="#pills-announcements" role="tab" aria-controls="pills-announcements" aria-selected="true">Announcements</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="pills-forms-tab" data-toggle="pill" href="#pills-forms" role="tab" aria-controls="pills-forms" aria-selected="false">Forms</a>
+    <a class="nav-link active" id="pills-forms-tab" data-toggle="pill" href="#pills-forms" role="tab" aria-controls="pills-forms" aria-selected="false">Forms</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" id="pills-references-tab" data-toggle="pill" href="#pills-references" role="tab" aria-controls="pills-references" aria-selected="false">References</a>
@@ -107,80 +153,53 @@ All activities related to HIPAA compliance and the privacy policies and procedur
 <!-- Tab Contents -->
 <div class="tab-content" id="pills-tabContent">
     
-    <!-- Announcements Tab  Info -->
-  <div class="tab-pane fade show active" id="pills-announcements" role="tabpanel" aria-labelledby="pills-announcements-tab">
-      <br>
-      <div class="container">   
-  <table class="table table-hover">
-    <tbody>
-      <tr>
-        <td class="filename"><h5>08/11/2018</h5></td>
-          <td class="filename"><h5>Utilization Management Independence Affirmation Memo to Network</h5></td>
-        <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/UMIndependenceAffirmationMemotonetwork.pdf" target="_blank">Download</a></button></td>
-      </tr>
-        
-      <tr>
-        <td class="filename"><h5>10/04/2019</h5></td>
-          <td class="filename"><h5>Hill Authorization Transition</h5></td>
-        <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Hill-Authorization-transitiion.pdf" target="_blank">Download</a></button></td>
-      </tr>
-        
-     <tr>
-        <td class="filename"><h5>10/17/2019</h5></td>
-          <td class="filename"><h5>HPMS Disaster Provider Access Memo</h5></td>
-        <td><button class="btn-download btn-primary"></i> <a class="download-link" href="pdfs/HPMS-Disaster-Provider-Access-Memo-9-29-2017.pdf" target="_blank">Download</a></button></td>
-      </tr>
-        
-    </tbody>
-  </table>
-</div>
-    </div>
-    
    <!-- Forms Tab Info --> 
-  <div class="tab-pane fade" id="pills-forms" role="tabpanel" aria-labelledby="pills-forms-tab">
+  <div class="tab-pane fade show active" id="pills-forms" role="tabpanel" aria-labelledby="pills-forms-tab">
       <br>
       <div class="container">   
   <table class="table table-hover">
     <tbody>
+         <tr>
+             <th><h6>Form</h6></th>
+             <th><h6 style="text-align: center;">Last Updated</h6></th>
+             <th></th>
+         </tr>    
       <tr>
-        <td class="filename"><h5>09/06/2019</h5></td>
-          <td class="filename"><h5>Great States Referral Form</h5></td>
+          <td><h5 class="filename">Great States Referral Form</h5></td>
+            <td><h5 class="filename">09/06/2019</h5></td>  
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Great-States-AUTHORIZATION-REFERRAL-FORM-07.23.2019-.pdf" target="_blank">Download</a></button></td>
       </tr>
         
       <tr>
-         <td class="filename"><h5>09/10/2019</h5></td>
-          <td class="filename"><h5>Pre-Authorization/Referral Authorization Request Form</h5></td>
+          <td><h5 class="filename">Pre-Authorization/Referral Authorization Request Form</h5></td>
+          <td><h5 class="filename">09/10/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/AUTHORIZATION-REFERRAL-FORM-07.23.2019-IHHMG-Revised.pdf" target="_blank">Download</a></button></td>
       </tr>
         
-      <tr>
-         <td class="filename"><h5>09/16/2019</h5></td>
-          <td class="filename"><h5>Direct Referral Form</h5></td>
+      <tr>       
+          <td><h5 class="filename">Direct Referral Form</h5></td>
+            <td><h5 class="filename">09/16/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/UM0001.00-Direct-Referral-201909.pdf" target="_blank">Download</a></button></td>
       </tr>          
         
       <tr>
-         <td class="filename"><h5>06/14/2018</h5></td>
-          <td class="filename"><h5>Provider Web Portal Application</h5></td>
-        <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Web-Portal-Application.pdf" target="_blank">Download</a></button></td>
-      </tr>
-        
-      <tr>
-         <td class="filename"><h5>01/09/2017</h5></td>
-          <td class="filename"><h5>Provider Dispute Resolution Request</h5></td>
+         
+          <td><h5 class="filename">Provider Dispute Resolution Request</h5></td>
+          <td><h5 class="filename">01/09/2017</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/IHHMG-PDR-Form.pdf" target="_blank">Download</a></button></td>
       </tr>
         
       <tr>
-         <td class="filename"><h5>04/18/2017</h5></td>
-          <td class="filename"><h5>Provider Demographic Info Change Request Form</h5></td>
+         
+          <td><h5 class="filename">Provider Demographic Info Change Request Form</h5></td>
+          <td><h5 class="filename">04/18/2017</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/IHP-Provider-Information-Change-Request.pdf" target="_blank">Download</a></button></td>
       </tr>
         
       <tr>
-         <td class="filename"><h5>09/13/2019</h5></td>
-          <td class="filename"><h5>W9</h5></td>
+         
+          <td><h5 class="filename">W9</h5></td>
+          <td><h5 class="filename">09/13/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/fw9-2018-revised.pdf" target="_blank">Download</a></button></td>
       </tr>                  
     </tbody>
@@ -194,28 +213,30 @@ All activities related to HIPAA compliance and the privacy policies and procedur
       <div class="container">   
   <table class="table table-hover">
     <tbody>
+         <tr>
+             <th><h6>Forms</h6></th>
+             <th><h6 style="text-align: center;">Last Updated</h6></th>
+             <th></th>
+         </tr> 
       <tr>
-        <td class="filename"><h5>01/02/2019</h5></td>
-          <td class="filename"><h5>Urgent Care Centers</h5></td>
+        
+          <td><h5 class="filename">Urgent Care Centers</h5></td>
+          <td><h5 class="filename">01/02/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Urgent-Care-Centers-2019.docx" target="_blank">Download</a></button></td>
       </tr>
         
        <tr>
-        <td class="filename"><h5>09/22/2016</h5></td>
-          <td class="filename"><h5>Provider Quick Reference Sheet</h5></td>
+        
+          <td><h5 class="filename">Provider Quick Reference Sheet</h5></td>
+           <td><h5 class="filename">09/22/2016</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Provider-Quick-Reference-Sheet.pdf" target="_blank">Download</a></button></td>
       </tr>
         
       <tr>
-        <td class="filename"><h5>09/21/2018</h5></td>
-          <td class="filename"><h5>Access to Care Standards</h5></td>
-        <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Access-To-Care-Standards-IHHMG.pdf" target="_blank">Download</a></button></td>
-      </tr>
         
-      <tr>
-        <td class="filename"><h5>10/15/2019</h5></td>
-          <td class="filename"><h5>EZ-NET Portal Guide</h5></td>
-        <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/EZ-Net-Portal-Guide-102019.pdf" target="_blank">Download</a></button></td>
+          <td><h5 class="filename">Access to Care Standards</h5></td>
+          <td><h5 class="filename">09/21/2018</h5></td>
+        <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Access-To-Care-Standards-IHHMG.pdf" target="_blank">Download</a></button></td>
       </tr>
         
     </tbody>
@@ -230,45 +251,57 @@ All activities related to HIPAA compliance and the privacy policies and procedur
       <div class="container">   
   <table class="table table-hover">
     <tbody>
+         <tr>
+             <th><h6>Forms</h6></th>
+             <th><h6 style="text-align: center;">Last Updated</h6></th>
+             <th></th>
+         </tr> 
       <tr>
-        <td class="filename"><h5>09/11/2019</h5></td>
-          <td class="filename"><h5>SNP MOC Training 2019</h5></td>
+        
+          <td><h5 class="filename">SNP MOC Training 2019</h5></td>
+          <td><h5 class="filename">09/11/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/2019-SNP-Model-Of-Care-Training.pdf" target="_blank">Download</a></button></td>
       </tr>
         
         <tr>
-        <td class="filename"><h5>04/27/2017</h5></td>
-          <td class="filename"><h5>SNP MOC Attestation 2017</h5></td>
+       
+          <td><h5 class="filename">SNP MOC Attestation 2017</h5></td>
+             <td><h5 class="filename">04/27/2017</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Imperial-Health-Holdings-SNP-MOC-Attestation-2.pdf" target="_blank">Download</a></button></td>
       </tr>
         
         <tr>
-        <td class="filename"><h5>12/19/2017</h5></td>
-          <td class="filename"><h5>Provider Manual</h5></td>
+        
+          <td><h5 class="filename">Provider Manual</h5></td>
+            <td><h5 class="filename">12/19/2017</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/IHP-Provider-Manual_2017-update-121817.pdf" target="_blank">Download</a></button></td>
       </tr> 
         
         <tr>
-        <td class="filename"><h5>03/31/2017</h5></td>
-          <td class="filename"><h5>Provider Manual Acknowledgment Form</h5></td>
+        
+          <td><h5 class="filename">Provider Manual Acknowledgment Form</h5></td>
+            <td><h5 class="filename">03/31/2017</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Provider-Manual-Acknowledgment-Form.pdf" target="_blank">Download</a></button></td>
       </tr>
         
         <tr>
-        <td class="filename"><h5>07/03/2017</h5></td>
-          <td class="filename"><h5>Fraud Waste and Abuse Training 2017</h5></td>
+        
+          <td><h5 class="filename">Fraud Waste and Abuse Training 2017</h5></td>
+            <td><h5 class="filename">07/03/2017</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/Fraud-Waste_Abuse-Training_12_13_11.pdf" target="_blank">Download</a></button></td>
       </tr>
         
         <tr>
-        <td class="filename"><h5>09/11/2019</h5></td>
-          <td class="filename"><h5>Fraud Waste and Abuse Training Attestation 2019</h5></td>
+      
+          <td><h5 class="filename">Fraud Waste and Abuse Training Attestation 2019</h5></td>
+              <td><h5 class="filename">09/11/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/2019-FWA-HIPAA-Training-Attestation.pdf" target="_blank">Download</a></button></td>
       </tr>
         
         <tr>
-        <td class="filename"><h5>09/11/2019</h5></td>
-          <td class="filename"><h5>California Programs Medi-Cal</h5></td>
+       
+          <td><h5 class="filename">California Programs Medi-Cal</h5></td>
+             <td><h5 class="filename">09/11/2019</h5></td>
         <td><button class="btn-download btn-primary"><a class="download-link" href="pdfs/IHHMG-California-Programs-Website-Additions-2019-1.pdf" target="_blank">Download</a></button></td>
       </tr>                  
     </tbody>

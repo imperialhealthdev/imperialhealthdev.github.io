@@ -1,9 +1,21 @@
 var app = angular.module('myApp', []);
 app.controller('providersCtrl', function($scope, $http) {
- $scope.quantity = 6;    
+$scope.quantity = 12; 
+     
   $http.get("https://imperialhealthdev.github.io/providers.json").then(function(response) {
-    $scope.myData = response.data.data;
+      $scope.myData = response.data.data;
   });
+    
+      $scope.clearFilter = function() {
+      $scope.query = "";
+      $scope.cc = {};
+    };
+    
+  $scope.loadMore = function() {
+      var incremented = $scope.quantity + 36;
+      $scope.quantity = incremented > $scope.myData.length ? $scope.myData.length : incremented;
+    };
+    
 });
 
 
@@ -47,3 +59,15 @@ app.filter('unique', function () {
             return items;
         };
     });
+
+app.directive("directiveWhenScrolled", function() {
+  return function(scope, elm, attr) {
+    var raw = elm[0];
+
+    elm.bind('scroll', function() {
+      if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
+        scope.$apply(attr.directiveWhenScrolled);
+      }
+    });
+  };
+});
