@@ -1,7 +1,7 @@
 var app = angular.module('myApp', []);
 app.controller('providersCtrl', function($scope, $http) {
-$scope.quantity = 12; 
-     
+$scope.quantity = 12;
+
   $http.get("https://imperialhealthdev.github.io/providers.json").then(function(response) {
       $scope.myData = response.data.data;
   });
@@ -11,11 +11,12 @@ $scope.quantity = 12;
       $scope.cc = {};
     };
     
+    
   $scope.loadMore = function() {
       var incremented = $scope.quantity + 36;
       $scope.quantity = incremented > $scope.myData.length ? $scope.myData.length : incremented;
     };
-    
+   
 });
 
 

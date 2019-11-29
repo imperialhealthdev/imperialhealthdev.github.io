@@ -103,7 +103,7 @@ body {
     color: #fff;
 }
 .carousel-inner {
-    max-height: 690px;
+    max-height: 760px;
 }
 
 
@@ -163,9 +163,6 @@ body {
         width: 510px;
     }
     
-    #providerModal {
-      overflow;
-    }
 
 }
 
@@ -370,6 +367,11 @@ text-align: left;
     color: rgb(0, 88, 255);
     font-weight: 100;
     
+}
+
+#provider-resources {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-top: 10px;
 }
 .table-head {
     text-align: center;

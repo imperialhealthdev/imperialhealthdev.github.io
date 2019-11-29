@@ -35,7 +35,7 @@
         <a class="nav-link">Members</a>
       </li>
     <li class="nav-item">
-        <a href="#" class="nav-link" data-toggle="modal" data-target="#providerModal">Provider Resources</a>
+        <a href="#provider-resources-files" class="nav-link">Provider Resources</a>
       </li>    
 <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Provider Portal</a>
@@ -64,7 +64,7 @@
       <div class="carousel-caption">
         <p>Delivering valuable care so that our members are healthy in  body, mind and spirit to achieve their inherent potential</p>
       </div>
-        <button type="button" class="btn mx-auto d-block" id="annoucements" data-toggle="modal" data-target="#announcementsModal">
+        <button type="button" class="btn mx-auto d-block" id="annoucements" data-toggle="modal" data-target="#announcementsModal" style="margin-top:">
   Announcements <span class="badge badge-light">3</span>
 </button>
     </div>
@@ -73,9 +73,14 @@
 </div>       
 
 
-<!-- Our Contracted Health Plans -->
-
+      
+<!-- Provider Resources -->
+<br><br>      
+<div id="provider-resources-files"></div>
 <br><br>
+<!-- End Provider Resources --> 
+      
+<!-- Our Contracted Health Plans -->
 
 <div class="container">
           
@@ -122,8 +127,12 @@
   </table>
 </div>
 <br><br>
-<!-- /.container -->
+<!-- End Health Plans -->
 
+      
+    
+
+      
 <!-- Scripts -->    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -131,6 +140,7 @@
 <script> 
 $(function(){
   $("#modal-content").load("modals.html"); 
+  $("#provider-resources-files").load("provider-resources-files.html"); 
 });
 </script>       
       
@@ -153,6 +163,7 @@ $(function(){
     
       <!-- Inject modal content -->
     <div id="modal-content"></div>
+    
    
 </html>
 
