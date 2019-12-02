@@ -3,6 +3,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>   
 <head>
   <title>Imperial Health Holdings</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="shortcut icon" href="/icons/ihh-logo-small.png"/>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,8 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="cardstyles.css">
   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Montserrat'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.css">    
+
 </head>
     
 <body class="search-body" ng-app="myApp" ng-controller="providersCtrl">
@@ -54,17 +54,9 @@
     <span class="ml-auto navbar-text">
   </div>
 </nav>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-      
-      
-<div class="ui icon input">
-  <input type="text" placeholder="Search...">
-  <i class="search icon"></i>
-</div>      
-      
+<br><br>
 <!-- Search Bar / Filters Container -->
 <div class="container" id="searchfunction">
-    
 <div class="row">
 <!-- Search Bar -->    
 <div class="col-lg offset-md" id="container" style="padding-top: 20px;">
@@ -72,12 +64,9 @@
     <input ng-model="query" type="text" class="form-control" placeholder="Search..." aria-label="Search" id="search-box">
     <div class="input-group-append">
         <button data-toggle="modal" data-target="#FilterModal" class="input-group-text"><h7>Filters</h7></button>
-    </div>
-    
+    </div> 
  </div>
-    
-    </div>
-     
+</div>
 </div>
     
 <!-- Drop Down Filters -->
@@ -166,7 +155,7 @@
                               <br>
                               <h7 class="info-text">{{x.Phone}}</h7>
                               <br><br>
-                            <a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fa-map-marker"></i></a>
+                            <a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fa fa-map-marker" aria-hidden="true"></i></a>
                         </div>
                     </li>
                 </ul>
@@ -178,10 +167,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.js"></script>      
   <script src="controller.js"></script>
      
