@@ -1,12 +1,9 @@
 
 *{
-    font-family: 'Montserrat', Arial, Georgia , sans-serif !important;
+    font-family: 'Montserrat', sans-serif;
     
 }
 
-html {
-    
-}
 body {
     padding-top: 170px;
 }
@@ -267,66 +264,7 @@ a.download-link {
   width: 70%;
 }
 
-.input-group-text {
-  background-color:  rgba(116, 68, 204, 0.72);
-  color: black;
-  height: inherit;
-}
 
-.input-group-text h7 {
-    color: #fff;
-}
-
-.fas {
-    color: #fff;
-}
-
-#dropdown option {
-    font-weight: normal;
-    background-color: rgba(250, 250, 250, 0.64);
-}
-
-.btn-group-vertical>.btn, .btn-group>.btn {
-background-color:  rgba(255, 255, 255, 0.64);
-color: #000;
-border-color: rgba(116, 68, 204, 0.72);
-width: 210px;
-border-bottom-left-radius: 15px;
-border-top-left-radius: 15px;
-}
-
-#filternames{
-padding-top: 5px;
-float: right;
-white-space: pre;    
-color: #000000;
-font-weight: 100;
-font-size: 17px;
-text-align: left;
-}
-
-#clear-filter {
-    float: left;
-}
-
-.btn-group {
-    margin-top: 15px;
-    float: right;
-}
-
-.dropdown-menu {         
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-.dropdown-menu.show {
-    border-color: rgba(116, 68, 204, 0.72);
-}
-
-#filtermodaldialog{
-    width: 360px;
-    padding-top: 15%;
-}
 
 .carousel-caption {
   position: absolute;
@@ -382,3 +320,30 @@ text-align: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#filter-button {
+    background-color: rgba(116, 68, 204, 0.72);
+    color: #fff;
+}
+
+#filter-button i {
+    color: #ffffff;
+}
+
+#clear-filter{
+    align-content: center;
+}
+
+.ui.popup{
+    overflow:auto;
+}
+
+.ui.vertical.menu .item {
+    width: 250px;
+}
+
+.ui.vertical.menu .item select {
+    overflow-y: auto;
+    width: 200px;
+    border: solid 1px;
+    border-color: rgba(181, 176, 190, 0.72);
+}

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="cardstyles.css">
   <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Montserrat'>
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.css">
 </head>
     
 <body class="search-body" ng-app="myApp" ng-controller="providersCtrl">
@@ -54,89 +54,68 @@
     <span class="ml-auto navbar-text">
   </div>
 </nav>
-<br><br>
+         
 <!-- Search Bar / Filters Container -->
 <div class="container" id="searchfunction">
 <div class="row">
 <!-- Search Bar -->    
-<div class="col-lg offset-md" id="container" style="padding-top: 20px;">
- <div class="input-group mb" id="searchdiv">
-    <input ng-model="query" type="text" class="form-control" placeholder="Search..." aria-label="Search" id="search-box">
-    <div class="input-group-append">
-        <button data-toggle="modal" data-target="#FilterModal" class="input-group-text"><h7>Filters</h7></button>
-    </div> 
- </div>
+<div class="col-lg offset-md" id="container" style="padding-top: 170px;">
+
+    <div class="ui fluid right action left icon input">
+  <input ng-model="query" type="text" placeholder="Search..." id="search-box">
+  <i class="search icon"></i>
+        <div class="ui horizontal animated button" tabindex="0" id="filter-button" data-position="bottom left">
+  <div class="visible content">Filters</div>
+  <div class="hidden content">
+    <i class="filter icon"></i>
+  </div>
 </div>
 </div>
-    
-<!-- Drop Down Filters -->
+        
 
-  <!-- Filters Modal -->
-  <div class="modal fade" id="FilterModal" role="dialog">
-    <div class="modal-dialog" id="filtermodaldialog">
+</div>
+</div>
+<br><br>
     
-      <!-- Modal content-->
-      <div class="modal-content">   
-        <div class="modal-body">
-             
+  <!-- Drop Down Filters -->
     
-
-<div class="row">
-  <div class="col-lg offset-md">
-      
-      <!-- Specialty Drop Down Filter -->
-      <div class="btn-group">
-      <h5 id="filternames">Specialty: </h5> <select ng-model="cc.Specialty" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+<div class="ui vertical menu custom popup bottom left transition hidden" id="filters">
+    <div class="header">Filter by Specialty</div><br>
+        <div class="item">
+            <select ng-model="cc.Specialty" id="dropdown" name="dropdown" class="btn dropdown-toggle">
             <option value=""> </option>
             <option ng-repeat="option in myData | unique:'Specialty' | orderBy:'Specialty'">{{option.Specialty}}</option>
-        </select>
-      </div>
-        
- 
-
-      <!-- City Drop Down Filter -->
-
-      <div class="btn-group">
-        <h5 id="filternames">City: </h5> <select ng-model="cc.City" ng-init="cc.City" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            </select>
+        </div>
+    <div class="divider"></div><br>
+    <div class="header">Filter by City</div><br>
+        <div class="item">
+            <select ng-model="cc.City" ng-init="cc.City" id="dropdown" name="dropdown" class="btn dropdown-toggle">
             <option value=""> City</option>
             <option ng-repeat="option in myData | unique:'City' | orderBy:'City'">{{option.City}}</option>
-        </select>
-      </div>
-      
-  
-      <!-- State Drop Down Filter -->
-       
-      
-      <div class="btn-group">
-        <h5 id="filternames">State: </h5> <select ng-model="cc.State" ng-init="cc.State" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            </select>
+        </div>
+    <div class="divider"></div><br>
+    <div class="header">Filter by State</div><br>
+        <div class="item">
+            <select ng-model="cc.State" ng-init="cc.State" id="dropdown" name="dropdown" class="btn dropdown-toggle">
             <option value=""> State</option>
             <option ng-repeat="option in myData | unique:'State' | orderBy:'State'">{{option.State}}</option>
-        </select>
-      </div>  
-
-      <!-- County Drop Down Filter -->
-
-      <div class="btn-group">
-        <h5 id="filternames">County: </h5> <select ng-model="cc.County" ng-init="cc.County" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            </select>
+        </div>
+    <div class="divider"></div><br>
+    <div class="header">Filter by County</div><br>
+        <div class="item">
+            <select ng-model="cc.County" ng-init="cc.County" id="dropdown" name="dropdown" class="btn dropdown-toggle">
             <option value=""> County</option>
             <option ng-repeat="option in myData | unique:'County' | orderBy:'County'">{{option.County}}</option>
-        </select>
-      </div>
-  </div>  
- </div>
-    
-</div>     
-<div class="modal-footer">
-    
-          <button class="btn btn-danger" id="clear-filter" ng-click="clearFilter()" type="button">Clear Filters</button>
-    
-          <button type="button" class="btn btn-success" data-dismiss="modal" style="float: right;">Close</button>
+            </select>
         </div>
-      </div>
-      
-    </div>
-  </div>      
-    
+    <div class="divider"></div><br>
+        <div class="item">
+             <button class="ui red basic button" id="clear-filter" ng-click="clearFilter()" type="button"> Clear Filters</button>
+        </div>
+</div>    
 </div>
 
       
@@ -155,13 +134,14 @@
                               <br>
                               <h7 class="info-text">{{x.Phone}}</h7>
                               <br><br>
-                            <a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fas fa-map-marker-alt"></i></a>
+                            <a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fas fa-map-marker-alt" id="map-marker"></i></a>
                         </div>
                     </li>
                 </ul>
     </div>
 </div>
-         
+    
+        <h3 style="text-align: center;">See any incorrect information? <a href="mailto: pno@imperialhealthholdings.com">Contact Us!</a></h3>
       
 <!-- Scripts -->  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -170,6 +150,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.js"></script>      
   <script src="controller.js"></script>
+  <script src="popover.js"></script>
      
       
 <script> 
