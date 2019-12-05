@@ -15,6 +15,7 @@ body {
 .search-body {
     background-color: #ffffff;
     height: 100%;
+    
 }
 
 .contact-body {
@@ -65,16 +66,18 @@ body {
     bottom: 0;
     left: 0;
     position: relative;
+    padding-bottom: 25px;
 }
 
 .page-footer-providersearch {
     color: #ffffff;
-    background-color: rgba(116, 68, 204, 0.72);
+    background-color: rgb(154, 117, 222);
     width: 100%;
     right: 0;
     bottom: 0;
     left: 0;
-    position: fixed;
+    padding-bottom: 25px;
+   
 }
 
 .page-footer-contact {
@@ -84,8 +87,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-     
-    
+    padding-bottom: 25px;
 }
 
 .footer-copyright {
@@ -320,6 +322,7 @@ a.download-link {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+
 #filter-button {
     background-color: rgba(116, 68, 204, 0.72);
     color: #fff;
@@ -333,10 +336,6 @@ a.download-link {
     align-content: center;
 }
 
-.ui.popup{
-    overflow:auto;
-}
-
 .ui.vertical.menu .item {
     width: 250px;
 }
@@ -347,3 +346,5 @@ a.download-link {
     border: solid 1px;
     border-color: rgba(181, 176, 190, 0.72);
 }
+
+.ui.popup{overflow:auto;}
