@@ -2,7 +2,7 @@ $('#filter-button')
   .popup({
     popup : $('.custom.popup'),
     on    : 'click',
-    lastResort: 'bottom left',
+    lastResort: 'bottom right',
         onShow: function(){
             resizePopup();
     },
