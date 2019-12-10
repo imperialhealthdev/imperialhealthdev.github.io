@@ -111,6 +111,14 @@
             <option ng-repeat="option in myData | unique:'County' | orderBy:'County'">{{option.County}}</option>
             </select>
         </div>
+        <div class="divider"></div><br>
+    <div class="header">Filter by Language</div><br>
+        <div class="item">
+            <select ng-model="cc.Language" ng-init="cc.Language" id="dropdown" name="dropdown" class="btn dropdown-toggle">
+            <option value=""> Language</option>
+            <option ng-repeat="option in myData | unique:'Language' | orderBy:'Language'">{{option.Language}}</option>
+            </select>
+        </div>
     <div class="divider"></div><br>
         <div class="item">
              <button class="ui red basic button" id="clear-filter" ng-click="clearFilter()" type="button"> Clear Filters</button>
@@ -133,6 +141,10 @@
                               <h7 class="info-text">{{x.City}} , {{x.State}} , {{x.Zip}}</h7>
                               <br>
                               <h7 class="info-text">{{x.Phone}}</h7>
+                              <br>
+                              <h7 class="info-text">NPI No. {{x.NPINO}}</h7>
+                              <br><br>
+                              <h7 class="info-text">Language: {{x.Language}}</h7>    
                               <br><br>
                             <a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fas fa-map-marker-alt" id="map-marker"></i></a>
                         </div>
