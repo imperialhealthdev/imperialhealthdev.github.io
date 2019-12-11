@@ -95,3 +95,13 @@
     overflow: auto;
 }
 
+#accept {
+    float: left; 
+    font-weight: bold;
+    padding-top: 7px
+}
+
+i.icon.check:before {
+    color: #08a708;
+    font-size: 18px
+}
