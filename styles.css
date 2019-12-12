@@ -20,7 +20,7 @@ body {
 
 .contact-body {
     padding-top: 200px;
-    
+    background-color: rgb(252, 252, 252);
 }
 
 .navbar-brand {
@@ -35,7 +35,7 @@ body {
 }
 
 .navbar-custom .navbar-nav .nav-link{
-    color: rgba(116, 68, 204, 0.72);
+    color: rgb(147, 129, 230);
 }
 
 .navbar-custom {
@@ -43,13 +43,13 @@ body {
     
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(116, 68, 204, 0.72);
+    color: #6659a1;
 }
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: rgba(116, 68, 204, 0.72);
+    color: #6659a1;
     text-decoration: underline;
     transform: scale(1.1);
 }
@@ -65,8 +65,8 @@ body {
       height: 100%;
   }
 .page-footer { 
-        color: #ffffff;
-    background-color: rgb(154, 117, 222);
+    color: #ffffff;
+    background-color: rgb(147, 129, 230);
     width: 100%;
     right: 0;
     bottom: 0;
@@ -77,7 +77,7 @@ body {
 
 .page-footer-providersearch {
     color: #ffffff;
-    background-color: rgb(154, 117, 222);
+    background-color: rgb(147, 129, 230);
     width: 100%;
     right: 0;
     bottom: 0;
@@ -88,7 +88,7 @@ body {
 
 .page-footer-contact {
     color: #ffffff;
-    background-color: rgba(116, 68, 204, 0.72);
+    background-color: rgb(147, 129, 230);
     width: 100%;
     right: 0;
     bottom: 0;
@@ -109,8 +109,12 @@ body {
 }
 .carousel-inner {
     max-height: 760px;
+    background-color: rgba(246, 245, 250, 0.3);
 }
 
+.carousel-inner img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 .modal-content {
     background-color:#ffffff; 
@@ -141,7 +145,7 @@ body {
 }
 
 .modal-header h4 , h5{
-    color: rgb(0, 0, 0);
+    color: rgb(0, 46, 201);
 }
 
 .modal-body button {
@@ -214,7 +218,7 @@ body {
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
-    background-color: rgba(116, 68, 204, 0.72);
+    background-color: #6659a1;
 }
 
 a {
@@ -238,8 +242,8 @@ a {
     cursor: pointer;
 }
 
-.filename h5{
-    color:  rgb(0, 88, 255);
+h5.filename{
+    color:  rgb(115, 126, 162);
     font-weight: 100;
 }
 
@@ -253,10 +257,11 @@ a.download-link {
    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: #54566f;
     max-width: 900px;
+    background-color: #fff;
 }
 
 #contact-container h3, #contact-container h5 {
-    color: rgba(0, 116, 126, 0.72);
+    color: rgba(47, 181, 140, 0.78);
     font-weight: bold;
 }
 
@@ -267,7 +272,7 @@ a.download-link {
 }
 
 #search-box {
-  border-color: rgba(116, 68, 204, 0.72);
+  border-color: #6659a1;
   height: 60px;
   width: 70%;
 }
@@ -279,7 +284,7 @@ a.download-link {
   top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgba(116, 68, 204, 0.72);
+  color: #6659a1;
   text-align: center;
   font-size: 28px;
 }
@@ -307,6 +312,7 @@ a.download-link {
 #health-plans {
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
 }
 
 #health-plans h5 {
@@ -321,16 +327,20 @@ a.download-link {
 }
 .table-head {
     text-align: center;
-    background-color: rgba(116, 68, 204, 0.72);
+    background-color: rgb(89, 144, 160);
     color: #fff;
     padding-top: 8px;
     padding-bottom: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+#filters {
+    height: 470px;
+    background-color: rgb(255, 255, 255);
+}
 
 #filter-button {
-    background-color: rgba(116, 68, 204, 0.72);
+    background-color: rgba(63, 83, 193, 0.76);
     color: #fff;
 }
 
@@ -349,8 +359,12 @@ a.download-link {
 .ui.vertical.menu .item select {
     overflow-y: auto;
     width: 200px;
-    border: solid 1px;
-    border-color: rgba(181, 176, 190, 0.72);
+    border: solid 2px;
+    border-color: #8c7ad6;
 }
 
-.ui.popup{overflow:auto;}
+.ui.popup{
+    overflow:auto;
+}
+
+

@@ -107,7 +107,7 @@
     <div class="header">Filter by County</div><br>
         <div class="item">
             <select ng-model="cc.County" ng-init="cc.County" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> County</option>
+            <option value=""> </option>
             <option ng-repeat="option in myData | unique:'County' | orderBy:'County'">{{option.County}}</option>
             </select>
         </div>
@@ -115,7 +115,7 @@
     <div class="header">Filter by Language</div><br>
         <div class="item">
             <select ng-model="cc.Language" ng-init="cc.Language" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> Language</option>
+            <option value=""> </option>
             <option ng-repeat="option in myData | unique:'Language' | orderBy:'Language'">{{option.Language}}</option>
             </select>
         </div>

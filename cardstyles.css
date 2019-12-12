@@ -28,7 +28,7 @@
 	 box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.15);
 }
  .container .page-wrapper .box .box-item:hover:before {
-	 background: rgba(116, 68, 204, 0.72);
+	 background: rgba(63, 83, 193, 0.76);
 	 width: 100%;
 }
  .container .page-wrapper .box .box-item:before {
@@ -40,12 +40,12 @@
 	 right: 0;
 	 display: block;
 	 content: '';
-	 background: rgba(116, 68, 204, 0.72);
+	 background: rgba(63, 83, 193, 0.76);
 	 transition: width 0.35s;
 }
  .container .page-wrapper .box .box-item-content .category {
 	 font-size: 16px;
-	 color: rgb(0, 55, 237);
+	 color: rgba(0, 123, 118);
 	 text-align: left;
 	 font-weight: 600;
 	 display: inline-block;
@@ -71,7 +71,7 @@
 	 text-align: center;
 	 font-weight: 700;
 	 display: inline-block;
-	 background-color: rgba(116, 68, 204, 0.72);
+	 background-color: rgba(63, 83, 193, 0.76);
 	 border-radius: 5px;
 	 float: right;
 }
