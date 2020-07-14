@@ -14,10 +14,11 @@
 </head>
     
 <body>
+<div id="body-container">
 <!-- Hello it's Austin -->
 <nav class="navbar navbar-custom navbar-expand-xl navbar-light fixed-top navbar-right">
   <!-- Brand -->
-  <a class="navbar-brand" href="index.html"><img src="icons/IHH-Logo-1024x381.png" alt="IHH Logo" width=300 height="120"></a>
+  <a class="navbar-brand" href="index"><img src="icons/IHH-Logo-1024x381.png" alt="IHH Logo" width=300 height="120"></a>
 
   <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -29,7 +30,7 @@
     <span class="ml-auto navbar-text">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="provider-search.html">Find a doctor</a>
+        <a class="nav-link" href="provider-search">Find a doctor</a>
       </li>
       <li class="nav-item">
         <a class="nav-link">Members</a>
@@ -46,13 +47,24 @@
     </div>
   </li>
       <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="nav-link" href="contact">Contact</a>
       </li>
     </ul>
     <span class="ml-auto navbar-text">
   </div>
 </nav>
 <br>
+      
+<!-- COVID 19 Alert -->
+      
+     <div class="alert alert-danger alert-dismissible fade show text-center">
+         <strong class="lead" role="alert" data-toggle="modal" data-target="#CovidModal">Click here for information related to COVID-19</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>      
+<!-- End Alert -->
+      
 <!-- Header Carousel -->
       
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -67,71 +79,76 @@
         <button type="button" class="btn mx-auto d-block" id="annoucements" data-toggle="modal" data-target="#announcementsModal" style="margin-top:">
   Announcements <span class="badge badge-light">3</span>
 </button>
+        
     </div>
   </div>
-     
+
 </div>       
-
-
+    <br><br>
+<!-- Our Contracted Health Plans -->
       
+<h2 class="text-center" id="indextext">Our Contracted Providers</h2>
+      
+<ul id="rig">
+    <li>
+        <a class="rig-cell" href="https://www.alignmenthealthplan.com/">
+            <img class="rig-img" src="icons/AHP_Logo.png" />
+            <span class="rig-overlay"></span>
+            
+        </a>
+    </li>
+    
+        <li>
+        <a class="rig-cell" href="https://www.anthem.com/">
+            <img class="rig-img" src="icons/abc_logo.png" />
+            <span class="rig-overlay"></span>
+            
+        </a>
+    </li>
+    
+        <li>
+        <a class="rig-cell" href="https://bndhmo.com/">
+            <img class="rig-img" src="icons/brandlogo.png" />
+            <span class="rig-overlay"></span>
+           
+        </a>
+    </li>
+    
+        <li>
+        <a class="rig-cell" href="https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_en/bsp/home?utm_source=display&utm_medium=mailer&utm_campaign=promisewcm&utm_content=home">
+            <img class="rig-img" src="icons/bsphp.png" />
+            <span class="rig-overlay"></span>
+           
+        </a>
+    </li>
+    
+        <li>
+        <a class="rig-cell" href="https://www.wellcare.com/california">
+            <img class="rig-img" src="icons/easychoicelogo.png" />
+            <span class="rig-overlay"></span>
+            
+        </a>
+    </li>
+    
+        <li>
+        <a class="rig-cell" href="https://www.imperialhealthplan.com/california/">
+            <img class="rig-img" src="icons/ihp-logo.png" />
+            <span class="rig-overlay">hi</span>
+           
+        </a>
+    </li>
+</ul>      
+<br><br>
+
+<!-- End Health Plans -->
+
+<h2 class="text-center" id="indextext">Provider Resources</h2>      
 <!-- Provider Resources -->
 <br><br>      
 <div id="provider-resources-files"></div>
-<br><br>
+
 <!-- End Provider Resources --> 
       
-<!-- Our Contracted Health Plans -->
-
-<div class="container">
-          
-  <table class="table table-hover table-bordered" id="health-plans">
-    <tbody>
-        <thead>
-            <tr>
-                <h4 class="table-head">Contracted Health Plans</h4>
-            </tr>
-        </thead>
-      <tr>
-        <td><a href="https://www.alignmenthealthplan.com/" target="_blank"><h5 >Alignment</h5></a></td>
-      </tr>
-      
-     <tr>
-        <td><a href="https://www.anthem.com/" target="_blank"><h5>Anthem BlueCross</h5></a></td>
-      </tr>
-      
-      <tr>
-        <td><a href="https://www.blueshieldca.com/bsca/bsc/wcm/connect/sites/sites_content_en/bsp/home?utm_source=display&utm_medium=mailer&utm_campaign=promisewcm&utm_content=home" target="_blank"><h5>Blue Shield Promise</h5></a></td>
-      </tr>
-      
-      <tr>
-        <td><a href="https://bndhmo.com/" target="_blank"><h5>Brand New Day</h5></a></td>
-      </tr>
-      
-      <tr>
-        <td><a href="https://www.centralhealthplan.com/" target="_blank"><h5>Central Health</h5></a></td>
-      </tr>
-      
-      <tr>
-        <td><a href="https://www.wellcare.com/california" target="_blank"><h5>Easy Choice</h5></a></td>
-      </tr>
-      
-      <tr>
-        <td><a href="https://www.humana.com/" target="_blank"><h5>Humana</h5></a></td>
-      </tr>
-      
-      <tr>
-        <td><a href="https://www.imperialhealthplan.com/california/" target="_blank"><h5>Imperial Health Plan</h5></a></td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
-<br><br>
-<!-- End Health Plans -->
-
-      
-    
-
       
 <!-- Scripts -->    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -144,23 +161,23 @@ $(function(){
 });
 </script>       
       
-</body>
-     
 <!------- Footer  -->
 <footer class="page-footer">
     
-    
  <!-- Copyright ------->  
-  <div class="footer-copyright text-center py-3">© 2019 Copyright: Imperial Health Holdings<br>
-600 South Lake Avenue Suite 303, Pasadena, CA 91106</div>
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Imperial Health Holdings<br>
+1100 East Green Street, Pasadena, CA 91106</div>
     
     <div class="row" id="footer-links">
-  <div class="col"><h5><a href="careers.html">Careers</a></h5></div>
+  <div class="col"><h5><a href="careers">Careers</a></h5></div>
   <div class="col"><h5><a href="" data-toggle="modal" data-target="#HIPPAModal">HIPPA</a></h5></div>
         <div class="col"><h5><a href="" data-toggle="modal" data-target="#TOSModal">Terms of Service</a></h5></div>
 </div>
 </footer>
-    
+      
+</div>      
+</body>
+     
       <!-- Inject modal content -->
     <div id="modal-content"></div>
     
