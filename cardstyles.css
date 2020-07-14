@@ -1,7 +1,6 @@
 .container {
 	 max-width: 1280px;
 	 margin: 0 auto;
-    
   
 } 
  .container .page-wrapper {
@@ -14,7 +13,7 @@
 	 justify-content: flex-start;
 	 align-items: center;
 	 flex-wrap: wrap;
-    height: 490px;
+         height: 500px;
   
 }
  .container .page-wrapper .box .box-item {
@@ -89,6 +88,7 @@
  
 .box {
     list-style: none;
+    
 }
 
 .page-wrapper {
