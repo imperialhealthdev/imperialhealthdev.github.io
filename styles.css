@@ -177,29 +177,17 @@ body {
 }
 
 
-@media only screen and (max-width: 414px) {
 
-
-}
 
 @media only screen and (max-width: 768px) {
     .modal-lg {
         max-width: 90% !important;
     }   
     
-    #contact-container {
-        width: 500px;
-    }
-}
-
-
-@media only screen and (width: 1024px) {
-    .container .page-wrapper {
-        height: 600px;
-        
-    }
 
 }
+
+
 
 
 @media only screen and (max-width: 1400px) {
