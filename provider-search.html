@@ -15,8 +15,8 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.2/dist/semantic.min.css">
 </head>
     
-<body class="search-body" ng-app="myApp" ng-controller="providersCtrl">
-
+<body ng-app="myApp" ng-controller="providersCtrl">
+<div id="body-container">
 <nav class="navbar navbar-custom navbar-expand-xl navbar-light fixed-top navbar-right">
  
   <a class="navbar-brand" href="index"><img src="icons/IHH-Logo-1024x381.png" alt="IHH Logo" width=300 height="120"></a>
@@ -171,11 +171,25 @@ $(function(){
 });
 </script>
     
-
+<div id="search-gap"</div>
 <!------- Footer ------->    
-
+<footer class="page-footer">
+    
+ <!-- Copyright ------->  
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Imperial Health Holdings<br>
+1100 East Green Street, Pasadena, CA 91106</div>
+    
+<div class="container">
+<div class="row" id="footer-links">
+  <div class="col"><h5><a href="careers">Careers</a></h5></div>
+  <div class="col"><h5><a href="" data-toggle="modal" data-target="#HIPPAModal">HIPPA</a></h5></div>
+  <div class="col"><h5><a href="" data-toggle="modal" data-target="#TOSModal">Terms of Service</a></h5></div>
+</div>
+</div>
+     <h3 id="correction">See any incorrect information? <a href="mailto: pno@imperialhealthholdings.com"> Contact Us!</a></h3>
+</footer>
       
-
+</div>
 </body>
   <!-- Inject modal content -->
     <div id="modal-content"></div>
