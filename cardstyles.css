@@ -14,7 +14,7 @@
 	 justify-content: flex-start;
 	 align-items: center;
 	 flex-wrap: wrap;
-    height: 500px;
+         max-height: 900px;
   
 }
  .container .page-wrapper .box .box-item {
