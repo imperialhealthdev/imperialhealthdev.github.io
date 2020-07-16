@@ -14,7 +14,7 @@
 	 justify-content: flex-start;
 	 align-items: center;
 	 flex-wrap: wrap;
-         max-height: 900px;
+    	 max-height: 500px;
   
 }
  .container .page-wrapper .box .box-item {
@@ -24,6 +24,7 @@
 	 transition: box-shadow 0.25s ease-in;
 	 box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
 	 margin: 15px 20px;
+	
 }
  .container .page-wrapper .box .box-item:hover {
 	 box-shadow: -2px 8px 22px 0 rgba(0, 0, 0, 0.15);
@@ -76,7 +77,6 @@
 	 border-radius: 5px;
 	 float: right;
 }
-
  
 .box {
     list-style: none;
