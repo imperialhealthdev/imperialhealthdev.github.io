@@ -481,10 +481,10 @@ a.download-link {
     position: fixed;
     top: 0;
     left: 0;
-
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
     transition: 0.5s;
+    border: 1px black;
 
 }
 
@@ -520,7 +520,8 @@ a.download-link {
 }
 
 #cardbody {
-    padding: 16px;
+
+    transition: margin-left .5s;
 }
 
 @media screen and (max-height: 450px) {
