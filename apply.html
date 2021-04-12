@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Imperial Health Holdings</title>
+  <link rel="shortcut icon" href="/icons/ihh-logo-small.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel=stylesheet href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    
+<body>
+<div id="body-container">
+<nav class="navbar navbar-custom navbar-expand-xl navbar-light fixed-top navbar-right">
+ 
+  <a class="navbar-brand" href="index"><img src="icons/IHH-Logo-1024x381.png" alt="IHH Logo" width=300 height="120"></a>
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <span class="ml-auto navbar-text">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="provider-search">Find a doctor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" >Members</a>
+      </li>
+    <li class="nav-item">
+        <a href="index#provider-resources-files" class="nav-link">Provider Resources</a>
+      </li>    
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Provider Portal</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="_blank">Provider Portal</a>
+      <a class="dropdown-item" href="pdfs/EZ-Net-Portal-Guide-102019.pdf" target="_blank">EZ-NET Portal Guide</a>
+      <a class="dropdown-item" href="pdfs/Web-Portal-Application.pdf" target="_blank">Web Portal Application</a>
+    </div>
+  </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact">Contact</a>
+      </li>
+    </ul>
+    <span class="ml-auto navbar-text">
+  </div>
+</nav>
+<br>
+
+
+      
+<!-- Scripts -->      
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script> 
+$(function(){
+  $("#modal-content").load("modals.html"); 
+});
+</script>       
+
+           
+<!------- Footer ------->    
+<footer class="page-footer">
+    
+ <!-- Copyright ------->  
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: Imperial Health Holdings<br>
+1100 East Green Street, Pasadena, CA 91106</div>
+    
+<div class="container">
+<div class="row" id="footer-links">
+  <div class="col"><h5><a href="careers">Careers</a></h5></div>
+  <div class="col"><h5><a href="" data-toggle="modal" data-target="#HIPPAModal">HIPPA</a></h5></div>
+  <div class="col"><h5><a href="" data-toggle="modal" data-target="#TOSModal">Terms of Service</a></h5></div>
+</div>
+</div>
+
+</footer>
+      
+</div>           
+</body>      
+    <!-- Inject modal content -->
+    <div id="modal-content"></div>
+    
+</html>
+
+   

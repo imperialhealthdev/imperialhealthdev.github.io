@@ -33,9 +33,6 @@
       <li class="nav-item">
         <a class="nav-link" href="provider-search">Find a doctor</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link">Members</a>
-      </li>
     <li class="nav-item">
         <a href="index#provider-resources-files" class="nav-link">Provider Resources</a>
       </li>    
@@ -62,7 +59,7 @@
 <div class="col-lg offset-md" id="container" style="padding-top: 170px;">
 
     <div class="ui fluid right action left icon input">
-  <input ng-model="query" type="text" placeholder="Type name, speciality, city, state, language..." id="search-box">
+  <input ng-model="query" type="text" placeholder="Type name, specialty, language..." id="search-box">
   <i class="search icon"></i>
         <div class="ui horizontal animated button" tabindex="0" id="filter-button" data-position="bottom left">
   <div class="visible content">Filters</div>
@@ -77,54 +74,54 @@
 </div>
 <br><br>
     
-  <!-- Drop Down Filters -->
-    
-<div class="ui vertical menu custom popup bottom left transition hidden" id="filters">
-    <div class="header">Filter by Specialty</div><br>
-        <div class="item">
-            <select ng-model="cc.Specialty" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> </option>
-            <option ng-repeat="option in myData | unique:'Specialty' | orderBy:'Specialty'">{{option.Specialty}}</option>
-            </select>
-        </div>
-    <div class="divider"></div><br>
-    <div class="header">Filter by City</div><br>
-        <div class="item">
-            <select ng-model="cc.City" ng-init="cc.City" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> City</option>
-            <option ng-repeat="option in myData | unique:'City' | orderBy:'City'">{{option.City}}</option>
-            </select>
-        </div>
-    <div class="divider"></div><br>
-    <div class="header">Filter by State</div><br>
-        <div class="item">
-            <select ng-model="cc.State" ng-init="cc.State" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> State</option>
-            <option ng-repeat="option in myData | unique:'State' | orderBy:'State'">{{option.State}}</option>
-            </select>
-        </div>
-    <div class="divider"></div><br>
-    <div class="header">Filter by County</div><br>
-        <div class="item">
-            <select ng-model="cc.County" ng-init="cc.County" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> </option>
-            <option ng-repeat="option in myData | unique:'County' | orderBy:'County'">{{option.County}}</option>
-            </select>
-        </div>
-        <div class="divider"></div><br>
-    <div class="header">Filter by Language</div><br>
-        <div class="item">
-            <select ng-model="cc.Language" ng-init="cc.Language" id="dropdown" name="dropdown" class="btn dropdown-toggle">
-            <option value=""> </option>
-            <option ng-repeat="option in myData | unique:'Language' | orderBy:'Language'">{{option.Language}}</option>
-            </select>
-        </div>
-    <div class="divider"></div><br>
-        <div class="item">
-             <button class="ui red basic button" id="clear-filter" ng-click="clearFilter()" type="button"> Clear Filters</button>
-        </div>
-</div>    
-</div>
+<!-- Drop Down Filters -->
+
+  <div class="ui vertical menu custom popup bottom left transition hidden" id="filters">
+               
+                <div class="header">Filter by City</div><br>
+                <div class="item">
+                    <select ng-model="cityFilter" ng-options="c as c for c in filteredCity | orderBy" name="dropdown" class="btn dropdown-toggle">
+                       
+                    </select>
+                </div>
+
+                <div class="divider"></div><br>
+
+                <div class="header">Filter by State</div><br>
+                <div class="item">
+                    <select ng-model="stateFilter" ng-options="st as st for st in filteredState | orderBy" name="dropdown" class="btn dropdown-toggle">
+                        
+                    </select>
+                </div>
+
+                <div class="divider"></div><br>
+
+                <div class="header">Filter by Language</div><br>
+                <div class="item">
+                    <select ng-model="langFilter" ng-options="l as l for l in filteredLang | orderBy" name="dropdown" class="btn dropdown-toggle">
+                       
+                    </select>
+                </div>
+
+                <div class="divider"></div><br>
+
+                <div class="header">Filter by Specialty</div><br>
+                <div class="item">
+                    <select ng-model="specFilter" ng-options="sp as sp for sp in filteredSpecialty | orderBy" name="dropdown" class="btn dropdown-toggle">
+                        
+                    </select>
+                </div>
+
+                <div class="divider"></div><br>
+
+
+
+                <div class="item">
+                    <button class="ui red basic button" id="clear-filter" ng-click="clearFilter()" type="button">Clear Filters</button>
+                </div>
+            </div>
+
+<!-- End Drop Down Filter -->
 
       
       
@@ -132,7 +129,7 @@
 <div class="container" id="cardbody">
   <div class="page-wrapper" directive-when-scrolled="loadMore()">
                 <ul class="box">
-                    <li class="box-item" ng-repeat="x in myData | filter:cc | filter:query | limitTo:quantity">
+                     <li class="box-item" ng-repeat="x in myData | filter: {City:cityFilter, State:stateFilter, Language:langFilter, Specialty:specFilter} | filter:query | limitTo:quantity">
                         <div class="box-item-content">
                             <span class="category">{{x.Specialty}}</span>
                             <h6 class="header">{{x.Name}}</h6>
@@ -140,13 +137,15 @@
                               <br>
                               <h7 class="info-text">{{x.City}} , {{x.State}} , {{x.Zip}}</h7>
                               <br>
+                              <h7 class="info-text">County: {{x.County}}</h7>
+                              <br>
                               <h7 class="info-text">{{x.Phone}}</h7>
                               <br>
                               <h7 class="info-text">NPI No. {{x.NPINO}}</h7>
                               <br><br>
                               <h7 class="info-text">Language: {{x.Language}}</h7>    
                               <br><br>
-                            <i class="check icon" id="accept"></i> <h8 class="info-text" id="accept">Accepting Patients</h8><a class="btn" ng-href="http://maps.google.com/maps?q={{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fas fa-map-marker-alt" id="map-marker"></i></a>
+                            <i class="check icon" id="accept"></i> <h8 class="info-text" id="accept">Accepting Patients</h8><a class="btn" ng-href="https://google.com/maps/place/{{x.Address}}+{{x.City}}+{{x.State}}+{{x.Zip}}" target="_blank">Map <i class="fas fa-map-marker-alt" id="map-marker"></i></a>
                         </div>
                     </li>
                 </ul>
@@ -176,12 +175,12 @@ $(function(){
 <footer class="page-footer">
     
  <!-- Copyright ------->  
-  <div class="footer-copyright text-center py-3">© 2020 Copyright: Imperial Health Holdings<br>
+  <div class="footer-copyright text-center py-3">© 2021 Copyright: Imperial Health Holdings<br>
 1100 East Green Street, Pasadena, CA 91106</div>
     
 <div class="container">
 <div class="row" id="footer-links">
-  <div class="col"><h5><a href="careers">Careers</a></h5></div>
+  <div class="col"><h5><a href="https://careers.imperialhealthholdings.com/">Careers</a></h5></div>
   <div class="col"><h5><a href="" data-toggle="modal" data-target="#HIPPAModal">HIPPA</a></h5></div>
   <div class="col"><h5><a href="" data-toggle="modal" data-target="#TOSModal">Terms of Service</a></h5></div>
 </div>
