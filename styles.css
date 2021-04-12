@@ -472,7 +472,7 @@ a.download-link {
 #mySidenav {
     margin-top: 8em;
     max-height: 100%;
-
+    padding-top: 3em
 }
 
 .sidenav {
@@ -483,6 +483,7 @@ a.download-link {
     left: 0;
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;
+    overflow-y: scroll;
     transition: 0.5s;
     border: 1px black;
 
