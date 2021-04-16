@@ -53,6 +53,10 @@ app.controller('providersCtrl', function ($scope, $http) {
         $scope.stateFilter = "";
         $scope.langFilter = "";
         $scope.specFilter = "";
+        
+                $(".page-wrapper").animate({
+            scrollTop: 0
+        }, "fast");
     };
 
 
