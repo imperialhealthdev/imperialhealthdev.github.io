@@ -32,6 +32,10 @@ body {
     height: 100%;
 }
 
+#searchfunction {
+    width: 100%;
+}
+
 .contact-body {
     padding-top: 200px;
     background-color: rgb(252, 252, 252);
