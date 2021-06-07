@@ -2,7 +2,7 @@ var app = angular.module('myApp', []);
 app.controller('providersCtrl', function ($scope, $http) {
     $scope.quantity = 12;
     $scope.loading = true;
-    $http.get("https://imperialhealthholdings.com/providers.json").then(function (response) {
+    $http.get("https://imperialhealthdev.github.io/providers.json").then(function (response) {
         
         $scope.myData = response.data.data;
         $scope.loading = false;
