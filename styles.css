@@ -578,4 +578,5 @@ a.download-link {
 .toast-body {
     opacity: 100;
     background-color: #ffffff;
+    font-weight: bolder;
 }
