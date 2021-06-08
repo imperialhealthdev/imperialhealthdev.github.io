@@ -62,6 +62,8 @@
                         </li>
                     </ul>
                     <span class="ml-auto navbar-text">
+
+                        
             </div>
         </nav>
         <br>
@@ -70,43 +72,18 @@
         <!-- Announcements Alert -->
         <div class="alert alert-dismissible fade show text-center" style="background-color: rgba(155, 118, 191, 0.76);"
             id="alert1">
-            <strong class="lead" role="alert" data-toggle="modal" data-target="#announcementsModal">Announcements <span
-                    class="badge badge-light">3</span></strong>
+            <strong class="lead" role="alert" data-toggle="modal" data-target="#announcementsModal" style="color: #ffffff;">Announcements</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <!-- End Alert -->
 
-        <!-- COVID 19 Alert -->
-
-        <div class="alert alert-danger alert-dismissible fade show text-center" id="alert2">
-            <strong class="lead" role="alert" data-toggle="modal" data-target="#CovidModal">Click here for information
-                related to COVID-19</strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <!-- End Alert -->
-
-        <div aria-live="polite" aria-atomic="true" class="position-relative">
-            <div class="toast-container position-absolute top-100 end-50 p-3">
-              <div class="toast" data-autohide="false">
-                <div class="toast-header">
-                  <strong class="mr-auto text-primary">To Our Providers</strong>
-                  
-                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
-                </div>
-                <div class="toast-body">
-                  You can easily check Eligibility, Claims Status, Authorizations and more via our <a href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="blank">Provider Portal</a>
-                </div>
-              </div>
-            </div>
-            </div>
 
         <!-- Header Carousel -->
 
         <div id="demo" class="carousel slide" data-ride="carousel">
+
 
             <!-- The slideshow -->
             <div class="carousel-inner">
@@ -118,10 +95,44 @@
                     </div>
 
                 </div>
-            </div>
+
+                            <!-- Flexbox container for aligning the toasts -->
+<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-end align-items-end w-100 p-0">
+
+    <!-- Then put toasts within -->
+    <div class="toast" data-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="mr-auto text-primary" style="color: #ffffff !important">To Our Providers</strong>
+        
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" id="toastclose">&times;</button>
+      </div>
+      <div class="toast-body">
+        You can easily check Eligibility, Claims Status, Authorizations and more via our <a href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="blank">Provider Portal</a>
+      </div>
+    </div>
+  </div>
 
         </div>
+
+        </div>
+
+
+        
         <br><br>
+
+
+        <!-- COVID 19 Alert -->
+
+        <div class="alert alert-danger alert-dismissible fade show text-center" id="alert2">
+            <strong class="lead" role="alert" data-toggle="modal" data-target="#CovidModal">Click here for information
+                related to COVID-19</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <!-- End Alert -->
+        <br><br>
+
         <!-- Our Contracted Health Plans -->
 
         <h1 class="text-center" id="indextext">Our Contracted Health Plans</h1>
@@ -193,22 +204,15 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script>
 
-            $(document).ready(function () {
-                $('.toast').toast('show');
-            });
             $(function () {
                 $("#modal-content").load("modals.html");
                 $("#provider-resources-files").load("provider-resources-files.html");
+                $('.toast').toast('show');
             });
 
             $("#alert1").fadeTo(7000, 500).slideUp(500, function () {
                 $("#alert1").slideUp(500);
             });
-
-            $("#alert2").fadeTo(14000, 500).slideUp(500, function () {
-                $("#alert2").slideUp(500);
-            });
-
         </script>
 
         <!------- Footer  -->

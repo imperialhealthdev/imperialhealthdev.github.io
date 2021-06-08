@@ -32,6 +32,10 @@ body {
     height: 100%;
 }
 
+#searchfunction {
+    width: 100%;
+}
+
 .contact-body {
     padding-top: 200px;
     background-color: rgb(252, 252, 252);
@@ -547,4 +551,31 @@ a.download-link {
     .sidenav a {
         font-size: 18px;
     }
+}
+
+
+.toast-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .25rem .75rem;
+    color: #ffffff;
+    background-color: #8c7ad6;
+    background-clip: padding-box;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+#toastclose {
+    
+        float: right;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        color: #ffffff !important;
+}
+
+.toast-body {
+    opacity: 100;
+    background-color: #ffffff;
 }
