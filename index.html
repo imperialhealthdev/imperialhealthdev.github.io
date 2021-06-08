@@ -8,20 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Style Sheets -->
-    <link rel="stylesheet" href="/require/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel=stylesheet href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="require/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div id="body-container">
         <!-- Hello it's Austin -->
+
+
         <nav class="navbar navbar-custom navbar-expand-xl navbar-light fixed-top navbar-right">
             <!-- Brand -->
-            <a class="navbar-brand" href="index"><img src="icons/IHH-Logo-1024x381.png" alt="IHH Logo" width=300 height="120"></a>
+            <a class="navbar-brand" href="index"><img src="icons/IHH-Logo-1024x381.png" alt="IHH Logo" width=300
+                    height="120"></a>
 
             <!-- Toggler/collapsibe Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -42,11 +45,16 @@
                             <a href="#provider-resources-files" class="nav-link">Provider Resources</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Provider Portal</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="true" aria-expanded="false">Provider Portal</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="_blank">Provider Portal</a>
-                                <a class="dropdown-item" href="pdfs/EZ-Net-Portal-Guide.pdf" target="_blank">EZ-NET Portal Guide</a>
-                                <a class="dropdown-item" href="https://forms.office.com/r/qybSnXqTsa" target="_blank">Web Portal Application</a>
+                                <a class="dropdown-item"
+                                    href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx"
+                                    target="_blank">Provider Portal</a>
+                                <a class="dropdown-item" href="pdfs/EZ-Net-Portal-Guide.pdf" target="_blank">EZ-NET
+                                    Portal Guide</a>
+                                <a class="dropdown-item" href="pdfs/Web-Portal-Application.pdf" target="_blank">Web
+                                    Portal Application</a>
                             </div>
                         </li>
                         <li class="nav-item">
@@ -60,8 +68,10 @@
 
 
         <!-- Announcements Alert -->
-        <div class="alert alert-dismissible fade show text-center" style="background-color: rgba(155, 118, 191, 0.76);" id="alert1">
-            <strong class="lead" role="alert" data-toggle="modal" data-target="#announcementsModal">Announcements <span class="badge badge-light">3</span></strong>
+        <div class="alert alert-dismissible fade show text-center" style="background-color: rgba(155, 118, 191, 0.76);"
+            id="alert1">
+            <strong class="lead" role="alert" data-toggle="modal" data-target="#announcementsModal">Announcements <span
+                    class="badge badge-light">3</span></strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -71,12 +81,28 @@
         <!-- COVID 19 Alert -->
 
         <div class="alert alert-danger alert-dismissible fade show text-center" id="alert2">
-            <strong class="lead" role="alert" data-toggle="modal" data-target="#CovidModal">Click here for information related to COVID-19</strong>
+            <strong class="lead" role="alert" data-toggle="modal" data-target="#CovidModal">Click here for information
+                related to COVID-19</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <!-- End Alert -->
+
+        <div aria-live="polite" aria-atomic="true" class="position-relative">
+            <div class="toast-container position-absolute top-100 end-50 p-3">
+              <div class="toast" data-autohide="false">
+                <div class="toast-header">
+                  <strong class="mr-auto text-primary">To Our Providers</strong>
+                  
+                  <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                  You can easily check Eligibility, Claims Status, Authorizations and more via our <a href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="blank">Provider Portal</a>
+                </div>
+              </div>
+            </div>
+            </div>
 
         <!-- Header Carousel -->
 
@@ -87,7 +113,8 @@
                 <div class="carousel-item active">
                     <img src="../icons/ihhfrontpage3.jpg" alt="happyelderlygroup" class="rounded mx-auto d-block">
                     <div class="carousel-caption">
-                        <p>Delivering valuable care so that our members are healthy in body, mind and spirit to achieve their inherent potential</p>
+                        <p>Delivering valuable care so that our members are healthy in body, mind and spirit to achieve
+                            their inherent potential</p>
                     </div>
 
                 </div>
@@ -161,20 +188,24 @@
 
 
         <!-- Scripts -->
-        <script src="/require/jquery/jquery.min.js"></script>
-        <script src="/require/jquery/popper.min.js"></script>
-        <script src="/require//bootstrap//bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script>
-            $(function() {
+
+            $(document).ready(function () {
+                $('.toast').toast('show');
+            });
+            $(function () {
                 $("#modal-content").load("modals.html");
                 $("#provider-resources-files").load("provider-resources-files.html");
             });
 
-            $("#alert1").fadeTo(7000, 500).slideUp(500, function() {
+            $("#alert1").fadeTo(7000, 500).slideUp(500, function () {
                 $("#alert1").slideUp(500);
             });
 
-            $("#alert2").fadeTo(14000, 500).slideUp(500, function() {
+            $("#alert2").fadeTo(14000, 500).slideUp(500, function () {
                 $("#alert2").slideUp(500);
             });
 
