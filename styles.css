@@ -130,7 +130,7 @@ body {
 
 .carousel-inner {
 
-    background-color: rgba(246, 245, 250, 0.3);
+    background-color: #ffffff;
 }
 
 .carousel-inner img {
@@ -198,7 +198,7 @@ h5 {
 
 
 .modal-content h5 {
-    rgba(129, 0, 255, 0.64);
+    color: rgba(129, 0, 255, 0.64);
 }
 
 
@@ -587,12 +587,12 @@ a.download-link {
 #formscard, #healtheducard, #trainingcard, #umresourcecard, #qualitycard {
 
     background-color: #ffffff;
-    border: 0.5px solid #8c7ad6;
+    border: 0.5px solid #525ea1;
     
 }
 
 #lefthp {
-    background-color: #8c7ad6;   
+    background-color: #525ea1;  
 }
 
 #righthp {
