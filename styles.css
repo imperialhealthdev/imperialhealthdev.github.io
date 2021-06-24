@@ -311,12 +311,15 @@ a.download-link {
 
 .carousel-caption {
     position: absolute;
-    top: 37%;
+    
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
     text-align: center;
     font-size: 28px;
+    padding: 1em;
+    background-color: #525ea1;
+    border-radius: 25px;
 
 }
 
@@ -563,7 +566,7 @@ a.download-link {
     color: #ffffff;
     background-color: #8c7ad6;
     background-clip: padding-box;
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    border: 1px solid #8c7ad6;
 }
 
 #toastclose {
