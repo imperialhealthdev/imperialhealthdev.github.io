@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -63,15 +64,22 @@
                     </ul>
                     <span class="ml-auto navbar-text">
 
-                        
+
             </div>
         </nav>
         <br>
+        <!-- COVID 19 Alert -->
 
+        <div class="alert alert-danger alert-dismissible fade show text-center" id="alert2">
+            <div><a class="lead alert-danger" role="alert" href="https://www.imperialhealthplan.com/covid-19/"
+                    target="_blank">Click here for information related to COVID-19</a></div>
+        </div>
+        <!-- End Alert -->
 
         <!-- Announcements Alert -->
         <div class="alert alert-dismissible fade show text-center" style="background-color: #8c7ad6" id="alert1">
-            <strong class="lead" role="alert" data-toggle="modal" data-target="#announcementsModal" style="color: #ffffff;">Announcements</strong>
+            <strong class="lead" role="alert" data-toggle="modal" data-target="#announcementsModal"
+                style="color: #ffffff;">Announcements</strong>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true" style="color: #ffffff;">&times;</span>
             </button>
@@ -95,105 +103,126 @@
 
                 </div>
 
-                            <!-- Flexbox container for aligning the toasts -->
-<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-end align-items-end w-100 p-0">
+                <!-- Flexbox container for aligning the toasts -->
+                <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-end align-items-end w-100 p-0" >
 
-    <!-- Then put toasts within -->
-    <div class="toast" data-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="mr-auto text-primary" style="color: #ffffff !important">To Our Providers</strong>
-        
-        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" id="toastclose">&times;</button>
-      </div>
-      <div class="toast-body">
-        You can easily check Eligibility, Claims Status, Authorizations and more via our <a href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx" target="blank">Provider Portal</a>
-      </div>
-    </div>
-  </div>
+                    <!-- Then put toasts within -->
+                    <div class="toast" data-autohide="false" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header">
+                            <strong class="mr-auto text-primary" style="color: #ffffff !important">To Our
+                                Providers</strong>
+
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast"
+                                id="toastclose">&times;</button>
+                        </div>
+                        <div class="toast-body">
+                            You can easily check Eligibility, Claims Status, Authorizations and more via our <a
+                                href="https://portal.imperialhealthholdings.com/EZ-NET60/Login.aspx"
+                                target="blank">Provider Portal</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
 
-        </div>
-
-
-        
         <br><br>
 
 
-        <!-- COVID 19 Alert -->
-
-        <div class="alert alert-danger alert-dismissible fade show text-center" id="alert2">
-            <div ><a class="lead alert-danger" role="alert" href="https://www.imperialhealthplan.com/covid-19/" target="_blank">Click here for information related to COVID-19</a></div>
-        </div>
-        <!-- End Alert -->
-        <br><br>
 
         <!-- Our Contracted Health Plans -->
 
-        <h1 class="text-center" id="indextext">Our Contracted Health Plans</h1>
 
-        <ul id="rig">
-            <li>
-                <a class="rig-cell" href="https://www.alignmenthealthplan.com/">
-                    <img class="rig-img" src="icons/AHP_Logo.png" />
-                    <span class="rig-overlay"></span>
 
-                </a>
-            </li>
+            <div class="d-md-flex h-md-100 align-items-center" data-aos="zoom-out-down" data-aos-duration="2000">
 
-            <li>
-                <a class="rig-cell" href="https://www.anthem.com/">
-                    <img class="rig-img" src="icons/abc_logo.png" />
-                    <span class="rig-overlay"></span>
+                <!-- First Half -->
+                <div class="col-md-6 p-0 bg-indigo h-md-100" id="lefthp">
+                    <div class="text-white d-md-flex align-items-center h-100 p-5 text-center justify-content-center">
+                        <div class="logoarea pt-5 pb-5">
+                            <h1 class="text-center">Our Contracted Health Plans</h1>
+                                <p>Click to find out more about each health plan.</p>
+                            <br>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Second Half -->
+                <div class="col-md-6 p-0 bg-white h-md-100 loginarea" data-aos="zoom-out-up" data-aos-duration="2000" id="righthp">
+                    <div class="d-md-flex align-items-center h-md-100 p-5 justify-content-center">
+                        
 
-                </a>
-            </li>
+                            <ul id="rig">
+                                <li>
+                                    <a class="rig-cell" href="https://www.alignmenthealthplan.com/">
+                                        <img class="rig-img" src="icons/AHP_Logo.png" />
+                                        <span class="rig-overlay"></span>
+        
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a class="rig-cell" href="https://www.anthem.com/">
+                                        <img class="rig-img" src="icons/abc_logo.png" />
+                                        <span class="rig-overlay"></span>
+        
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a class="rig-cell" href="https://bndhmo.com/">
+                                        <img class="rig-img" src="icons/brandlogo.png" />
+                                        <span class="rig-overlay"></span>
+        
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a class="rig-cell" href="https://www.scanhealthplan.com/">
+                                        <img class="rig-img" src="icons/scan-hp.svg" />
+                                        <span class="rig-overlay"></span>
+        
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a class="rig-cell" href="https://www.wellcare.com/california">
+                                        <img class="rig-img" src="icons/easychoicelogo.png" />
+                                        <span class="rig-overlay"></span>
+        
+                                    </a>
+                                </li>
+        
+                                <li>
+                                    <a class="rig-cell" href="https://www.imperialhealthplan.com/california/">
+                                        <img class="rig-img" src="icons/ihp-logo.png" />
+                                        <span class="rig-overlay">hi</span>
+        
+                                    </a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+                    
+            </div>
+   
 
-            <li>
-                <a class="rig-cell" href="https://bndhmo.com/">
-                    <img class="rig-img" src="icons/brandlogo.png" />
-                    <span class="rig-overlay"></span>
-
-                </a>
-            </li>
-
-            <li>
-                <a class="rig-cell" href="https://www.scanhealthplan.com/">
-                    <img class="rig-img" src="icons/scan-hp.svg" />
-                    <span class="rig-overlay"></span>
-
-                </a>
-            </li>
-
-            <li>
-                <a class="rig-cell" href="https://www.wellcare.com/california">
-                    <img class="rig-img" src="icons/easychoicelogo.png" />
-                    <span class="rig-overlay"></span>
-
-                </a>
-            </li>
-
-            <li>
-                <a class="rig-cell" href="https://www.imperialhealthplan.com/california/">
-                    <img class="rig-img" src="icons/ihp-logo.png" />
-                    <span class="rig-overlay">hi</span>
-
-                </a>
-            </li>
-        </ul>
         <br><br>
 
         <!-- End Health Plans -->
 
-        <h2 class="text-center" id="indextext">Provider Resources</h2>
+        <h2 class="text-center" id="indextext" data-aos="fade-down" data-aos-duration="2000">Provider Resources</h2>
         <!-- Provider Resources -->
         <br><br>
-        <div id="provider-resources-files"></div>
+        <div id="provider-resources-files" data-aos="fade-down" data-aos-duration="2000"></div>
 
         <!-- End Provider Resources -->
 
 
         <!-- Scripts -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -208,6 +237,8 @@
             $("#alert1").fadeTo(7000, 500).slideUp(500, function () {
                 $("#alert1").slideUp(500);
             });
+
+            AOS.init();
         </script>
 
         <!------- Footer  -->

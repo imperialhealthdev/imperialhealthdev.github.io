@@ -580,3 +580,18 @@ a.download-link {
     background-color: #ffffff;
     font-weight: bolder;
 }
+
+#formscard, #healtheducard, #trainingcard, #umresourcecard, #qualitycard {
+
+    background-color: #ffffff;
+    border: 0.5px solid #8c7ad6;
+    
+}
+
+#lefthp {
+    background-color: #8c7ad6;   
+}
+
+#righthp {
+    background-color: #16171a;
+}
